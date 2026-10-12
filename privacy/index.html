@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy | JP Smart</title>
+<meta name="description" content="How JP Smart Fitouts &amp; Repairs handles your details.">
+<link rel="canonical" href="https://jpsmart.com.au/privacy/">
+<meta name="theme-color" content="#17191C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JP Smart Fitouts &amp; Repairs">
+<meta property="og:locale" content="en_AU">
+<meta property="og:title" content="Privacy | JP Smart">
+<meta property="og:description" content="How JP Smart Fitouts &amp; Repairs handles your details.">
+<meta property="og:url" content="https://jpsmart.com.au/privacy/">
+<meta property="og:image" content="https://jpsmart.com.au/og.png">
+<meta property="og:image:alt" content="JP Smart Fitouts &amp; Repairs logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
+<style>
+/* Layout: photo-led trade site. Charcoal and white bands, one typeface (Archivo),
+   one heading style, yellow kept for actions and the "done" moments. */
+:root {
+  --ink: #17191C;
+  --ink-2: #4B5159;
+  --ink-3: #5F666D;
+  --paper: #FFFFFF;
+  --grey: #F3F4F5;
+  --line: #E1E4E7;
+  --yellow: #FFC400;
+  --yellow-press: #EBB400;
+  --on-dark: #C4C9CE;
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --wide: 112%;
+  --gut: 20px;
+  --tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 7.2l2.6 2.6L11 4.4' fill='none' stroke='%2317191C' stroke-width='2'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.65 var(--font); -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--font); font-weight: 800; font-stretch: var(--wide); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+h1 { font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1; }
+h2 { font-size: clamp(1.9rem, 3.3vw, 2.7rem); line-height: 1.06; }
+h3 { font-size: 1.2rem; line-height: 1.25; letter-spacing: 0; }
+p { margin: 0; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: var(--gut); }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.lead { font-size: 1.18rem; line-height: 1.6; color: var(--ink-2); max-width: 58ch; }
+.tbc { text-decoration: underline dotted var(--yellow-press); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+section { padding-block: clamp(72px, 9vw, 120px); }
+.head { display: grid; gap: 14px; max-width: 720px; margin-bottom: clamp(36px, 5vw, 56px); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .55em; min-height: 52px; padding: 0 1.5em;
+  font: 700 1rem/1 var(--font); border-radius: 4px; text-decoration: none; border: 2px solid transparent; cursor: pointer; transition: background .15s, border-color .15s; }
+.btn-yellow { background: var(--yellow); color: var(--ink); }
+.btn-yellow:hover { background: var(--yellow-press); }
+.btn-line { border-color: rgba(255, 255, 255, .45); color: var(--paper); background: transparent; }
+.btn-line:hover { border-color: var(--paper); }
+
+/* draft notice */
+.draft { background: var(--ink); color: var(--on-dark); font-size: .85rem; padding-block: .55rem; border-bottom: 1px solid #2E3237; }
+.draft b { color: var(--yellow); }
+
+/* header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 28px; min-height: 76px; }
+.logo { display: block; line-height: 0; color: var(--ink); }
+.top .logo svg { height: 36px; width: auto; }
+.top nav { margin-left: auto; display: flex; gap: 28px; font-weight: 600; font-size: .95rem; }
+.top nav a { text-decoration: none; color: var(--ink-2); white-space: nowrap; }
+.top nav a:hover { color: var(--ink); }
+.top .phone { font-weight: 700; text-decoration: none; white-space: nowrap; }
+.top .btn { min-height: 46px; padding: 0 1.2em; font-size: .95rem; }
+@media (max-width: 1180px) { .top nav { display: none; } .top .phone { margin-left: auto; } }
+@media (max-width: 720px) { .top .btn, .top .phone { display: none; } .top .wrap { min-height: 64px; } .top .logo svg { height: 30px; } }
+
+/* hero: text on charcoal, photo bleeding to the right edge */
+.hero { background: var(--ink); color: var(--paper); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: min(640px, 82vh); }
+.hero-text { padding: clamp(48px, 7vw, 96px) clamp(28px, 5vw, 72px) clamp(48px, 7vw, 88px) max(var(--gut), calc((100vw - 1200px) / 2 + var(--gut))); display: grid; align-content: center; gap: 22px; }
+.hero .eyebrow { color: var(--on-dark); }
+.hero h1 .hl { color: var(--yellow); display: block; }
+.hero .lead { color: var(--on-dark); }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
+.ai-note { font-size: .92rem; color: var(--on-dark); max-width: 52ch; }
+.hero-photo { position: relative; min-height: 280px; }
+.hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 35%; }
+.hero-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: var(--yellow); }
+@media (max-width: 880px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-photo { order: -1; min-height: max(240px, 48vw); }
+  .hero-text { padding: 36px var(--gut) 48px; }
+}
+
+/* trust strip */
+.trust { border-bottom: 1px solid var(--line); }
+.trust ul { list-style: none; margin: 0 auto; padding: 28px var(--gut); max-width: 1200px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 32px; }
+.trust li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; font-size: .95rem; color: var(--ink-2); }
+.trust b { display: block; color: var(--ink); font-size: 1rem; }
+.ico { width: 40px; height: 40px; border-radius: 50%; background: var(--grey); display: grid; place-items: center; }
+.ico svg { width: 22px; height: 22px; fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 960px) { .trust ul { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .trust ul { grid-template-columns: 1fr; } }
+
+/* services */
+.cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 24px; }
+.card { display: grid; gap: 14px; align-content: start; }
+.card img { aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: cover; border-radius: 4px; background: var(--grey); }
+.card ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; color: var(--ink-2); font-size: .97rem; }
+.card li { padding-left: 16px; position: relative; }
+.card li::before { content: ""; position: absolute; left: 0; top: .78em; width: 7px; height: 2px; background: var(--ink); }
+@media (max-width: 1000px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .cards { grid-template-columns: 1fr; } }
+.limits { margin-top: clamp(40px, 6vw, 64px); background: var(--grey); border-radius: 4px; padding: 26px 28px; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 16px 40px; }
+.limits p { color: var(--ink-2); margin-top: 8px; }
+.limits ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; font-size: .97rem; }
+.limits li { padding-left: 24px; position: relative; }
+.limits li::before { content: ""; position: absolute; left: 0; top: .42em; width: 13px; height: 13px; border: 2px solid var(--ink); border-radius: 50%;
+  background: linear-gradient(135deg, transparent 43%, var(--ink) 43% 57%, transparent 57%); }
+@media (max-width: 820px) { .limits, .limits ul { grid-template-columns: 1fr; } }
+
+/* IKEA assembly: Minh's headline speciality */
+.ikea { background: var(--grey); position: relative; }
+.ikea::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 10px; background: var(--yellow); }
+.ikea-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 88px); align-items: center; }
+.ikea-photos { position: relative; padding: 0 16% 24% 0; }
+.ikea-photos figure { margin: 0; position: relative; }
+.ikea-photos img { width: 100%; height: auto; border-radius: 4px; }
+.ikea-photos .after { position: absolute; right: 0; bottom: 0; width: 44%; border: 6px solid var(--paper); border-radius: 6px; background: var(--paper); box-shadow: 0 24px 60px -24px rgba(23, 25, 28, .45); }
+.ikea-photos figcaption { position: absolute; left: 12px; top: 12px; background: var(--ink); color: var(--paper); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 5px 10px; border-radius: 3px; }
+.ikea-photos .after figcaption { left: 8px; top: 8px; background: var(--yellow); color: var(--ink); }
+.ikea .eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.tag { background: var(--ink); color: var(--yellow); padding: 4px 9px; border-radius: 3px; letter-spacing: .1em; }
+.mark { background: linear-gradient(transparent 60%, var(--yellow) 60% 92%, transparent 92%); }
+.ikea-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 32px; }
+.ikea-cols h3 { font-size: 1.05rem; padding-bottom: 8px; margin-bottom: 10px; border-bottom: 2px solid var(--ink); }
+.ikea-cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; color: var(--ink-2); font-size: .97rem; }
+.ikea-cols li { padding-left: 16px; position: relative; }
+.ikea-cols li::before { content: ""; position: absolute; left: 0; top: .78em; width: 7px; height: 2px; background: var(--ink); }
+.ikea .checks { margin: 30px 0 30px; }
+.ikea .checks span { color: var(--ink-2); }
+.btn-dark { border-color: var(--ink); color: var(--ink); background: transparent; }
+.btn-dark:hover { background: var(--ink); color: var(--paper); }
+.ikea-legal { margin-top: 20px; font-size: .8rem; color: var(--ink-3); }
+@media (max-width: 900px) { .ikea-grid { grid-template-columns: 1fr; } .ikea-photos { max-width: 620px; } }
+@media (max-width: 520px) { .ikea-cols { grid-template-columns: 1fr; } }
+
+/* how it works */
+.how { background: var(--grey); }
+.how-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(40px, 6vw, 88px); align-items: center; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 26px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 18px; }
+.steps li::before { content: counter(s); width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--yellow); display: grid; place-items: center; font-weight: 800; font-size: 1.1rem; }
+.steps p { color: var(--ink-2); margin-top: 4px; }
+.sheet { background: var(--paper); border-radius: 6px; padding: 26px 26px 24px; box-shadow: 0 24px 60px -24px rgba(23, 25, 28, .35); }
+.sheet-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 2px solid var(--ink); }
+.sheet-head b { font-weight: 800; font-stretch: var(--wide); letter-spacing: .04em; }
+.sheet-head span { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.sheet dl { margin: 0; display: grid; grid-template-columns: 74px 1fr; gap: 9px 14px; font-size: .95rem; }
+.sheet dt { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); padding-top: .2em; }
+.sheet dd { margin: 0; min-width: 0; }
+.sheet ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.sheet li { display: flex; gap: 9px; align-items: baseline; }
+.sheet li::before { content: ""; width: 15px; height: 15px; flex: none; border-radius: 3px; transform: translateY(2px); background: var(--yellow) var(--tick) center / 70% no-repeat; }
+.sheet .done { margin-top: 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--ink-3); }
+.sheet .done b { background: var(--yellow); color: var(--ink); font-weight: 800; letter-spacing: .12em; padding: 5px 12px; border-radius: 3px; font-size: .85rem; }
+.price { margin: clamp(48px, 6vw, 72px) 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.price div { background: var(--paper); border-radius: 4px; padding: 22px 24px; display: grid; gap: 6px; align-content: start; }
+.price dt { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.price dd { margin: 0; }
+.price .big { font-size: 1.35rem; font-weight: 800; font-stretch: var(--wide); line-height: 1.2; }
+.price .sub { color: var(--ink-2); font-size: .97rem; }
+section:not(.how) .price div { background: var(--grey); }
+@media (max-width: 900px) { .how-grid, .price { grid-template-columns: 1fr; } }
+
+/* photo band */
+.band { position: relative; color: var(--paper); padding-block: clamp(80px, 11vw, 150px); overflow: hidden; }
+.band > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.band::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23, 25, 28, .92), rgba(23, 25, 28, .6) 60%, rgba(23, 25, 28, .35)); z-index: 1; }
+.band .wrap { position: relative; z-index: 2; display: grid; gap: 20px; }
+.band .eyebrow { color: var(--on-dark); }
+.band h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); max-width: 16ch; }
+.band h2 span { color: var(--yellow); }
+.band p:not(.eyebrow) { color: var(--on-dark); max-width: 52ch; font-size: 1.15rem; }
+.band .btn { justify-self: start; }
+
+/* property managers */
+.pm { background: var(--ink); color: var(--paper); }
+.pm-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(40px, 6vw, 88px); align-items: center; }
+.pm-photo { border-radius: 4px; overflow: hidden; aspect-ratio: 1; max-width: 100%; }
+.pm-photo img { width: 100%; height: 100%; object-fit: cover; }
+.pm .head { margin-bottom: 0; }
+.pm .eyebrow, .pm .lead { color: var(--on-dark); }
+.checks { list-style: none; margin: 30px 0 32px; padding: 0; display: grid; gap: 18px; }
+.checks li { display: grid; grid-template-columns: 24px 1fr; gap: 14px; }
+.checks li::before { content: ""; width: 24px; height: 24px; border-radius: 50%; margin-top: 1px; background: var(--yellow) var(--tick) center / 62% no-repeat; }
+.checks b { display: block; }
+.checks span { color: var(--on-dark); font-size: .97rem; }
+@media (max-width: 900px) { .pm-grid { grid-template-columns: 1fr; } .pm-photo { aspect-ratio: 16 / 9; } }
+
+/* property managers page */
+.text-cards .card { background: var(--grey); border-radius: 4px; padding: 22px 24px; }
+.checks.light span { color: var(--ink-2); }
+.paper-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 88px); align-items: start; }
+.price.stack { margin: 0; grid-template-columns: 1fr; gap: 14px; }
+.price.stack div { background: var(--grey); }
+.subs.wide { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) { .paper-grid { grid-template-columns: 1fr; } .subs.wide { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .subs.wide { grid-template-columns: 1fr; } }
+
+/* service area */
+.area-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(36px, 5vw, 72px); align-items: start; }
+.map-wrap { border-radius: 4px; overflow: hidden; border: 1px solid var(--line); background: #E4E9ED; }
+.area-map { display: block; width: 100%; height: auto; }
+.area-map .m-lab { font: 700 25px var(--font); }
+.area-map .m-lab { paint-order: stroke; stroke: #23272C; stroke-width: 7px; stroke-linejoin: round; }
+.area-map .m-cbd { stroke: #FFC400; }
+.area-map .m-ctx { font: 600 21px var(--font); fill: #7E858C; }
+.area-map .m-scale text, .area-map .m-north text { font: 700 22px var(--font); fill: var(--ink); }
+.area-map .m-credit { font: 400 16px var(--font); fill: #5F666D; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 12px; font-size: .88rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.legend i { width: 14px; height: 14px; border-radius: 2px; display: inline-block; }
+.check { display: grid; gap: 8px; margin-bottom: 30px; }
+.check label { font-weight: 700; font-size: .95rem; }
+.check output { font-weight: 600; min-height: 1.65em; display: flex; align-items: center; gap: 8px; }
+.check output.yes::before { content: ""; width: 18px; height: 18px; border-radius: 50%; flex: none; background: var(--yellow) var(--tick) center / 70% no-repeat; }
+.subs { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 32px; }
+.subs h3 { font-size: .78rem; font-weight: 700; font-stretch: 100%; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); padding-bottom: 8px; margin-bottom: 6px; border-bottom: 1px solid var(--line); }
+.subs ul { list-style: none; margin: 0; padding: 0; font-size: .95rem; line-height: 1.9; }
+.subs li { display: flex; justify-content: space-between; gap: 10px; }
+.subs li small { color: var(--ink-3); font-size: .85rem; font-variant-numeric: tabular-nums; }
+.area-note { margin-top: 26px; color: var(--ink-2); font-size: .97rem; }
+@media (max-width: 960px) { .area-grid { grid-template-columns: 1fr; } }
+@media (max-width: 460px) { .subs { grid-template-columns: 1fr; } }
+
+/* who turns up */
+#minh { padding-top: 0; }
+.person { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; align-items: center; border-top: 1px solid var(--line); padding-top: clamp(56px, 7vw, 88px); }
+.person > div { max-width: 860px; }
+.person.has-photo { grid-template-columns: 260px minmax(0, 1fr); }
+.person img { border-radius: 4px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+.person .eyebrow { margin-bottom: 16px; }
+.person blockquote { margin: 0; font-size: clamp(1.35rem, 2.4vw, 1.8rem); line-height: 1.4; font-weight: 500; }
+.person .sig { margin-top: 22px; display: flex; gap: 14px; align-items: center; color: var(--ink-2); }
+.person .sig b { color: var(--ink); font-size: 1.05rem; }
+.person .sig::before { content: ""; width: 36px; height: 3px; background: var(--yellow); }
+@media (max-width: 700px) { .person.has-photo { grid-template-columns: 1fr; } .person img { max-width: 260px; } }
+
+/* recent work (only rendered once real photos exist) */
+.work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.work-grid figure { margin: 0; display: grid; gap: 10px; }
+.ba { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.ba img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+.work-grid figcaption { color: var(--ink-2); font-size: .95rem; }
+@media (max-width: 860px) { .work-grid { grid-template-columns: 1fr; } }
+
+/* faq */
+.faq { background: var(--grey); }
+.faq-grid { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: clamp(32px, 5vw, 72px); }
+.faq-list { border-top: 1px solid #CFD3D7; }
+.faq details { border-bottom: 1px solid #CFD3D7; }
+.faq summary { cursor: pointer; list-style: none; padding: 22px 44px 22px 0; font-weight: 700; font-size: 1.08rem; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; position: absolute; right: 6px; top: 50%; width: 11px; height: 11px; margin-top: -8px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg); transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.faq details p { padding-bottom: 22px; color: var(--ink-2); max-width: 64ch; }
+@media (max-width: 860px) { .faq-grid { grid-template-columns: 1fr; } }
+
+/* contact */
+.contact { background: var(--ink); color: var(--paper); }
+.contact-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(36px, 6vw, 88px); align-items: start; }
+.contact .eyebrow, .contact .lead { color: var(--on-dark); }
+.contact .head { margin-bottom: 0; }
+.direct { margin: 36px 0 0; padding: 0; list-style: none; display: grid; gap: 22px; }
+.direct > li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; align-items: center; }
+.direct .ico { background: #2A2E33; }
+.direct .ico svg { stroke: var(--yellow); }
+.direct .k { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--on-dark); }
+.direct .v { margin: 0; font-weight: 700; font-size: 1.15rem; overflow-wrap: anywhere; }
+.direct .addr { font-size: 1rem; font-weight: 600; }
+.direct .v a { text-decoration: none; }
+form { background: var(--paper); color: var(--ink); border-radius: 6px; padding: clamp(22px, 4vw, 38px); display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+form h3 { grid-column: 1 / -1; font-size: 1.4rem; }
+.field { display: grid; gap: 6px; min-width: 0; align-content: start; }
+.field.full { grid-column: 1 / -1; }
+label { font-weight: 600; font-size: .9rem; }
+label small { font-weight: 400; color: var(--ink-3); }
+input, select, textarea { font: 400 1rem var(--font); color: var(--ink); background: var(--paper); border: 1.5px solid #C9CDD2; border-radius: 4px; padding: .8em .9em; width: 100%; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(255, 196, 0, .55); }
+input[type=file] { padding: .6em; font-size: .9rem; }
+textarea { min-height: 120px; resize: vertical; }
+.hp { position: absolute; left: -9999px; }
+.form-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.form-foot p { font-size: .88rem; color: var(--ink-3); flex: 1 1 200px; }
+.sent { grid-column: 1 / -1; background: var(--grey); padding: 14px 16px; border-radius: 4px; font-weight: 600; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { form { grid-template-columns: 1fr; } }
+
+/* footer */
+footer { background: #111315; color: var(--on-dark); padding-block: 56px 36px; font-size: .95rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: 32px; }
+footer .logo { color: var(--paper); }
+footer .logo svg { height: 40px; width: auto; max-width: 100%; }
+footer .tag { margin-top: 16px; }
+.foot-h { font-size: .75rem; font-weight: 700; font-stretch: 100%; letter-spacing: .14em; text-transform: uppercase; color: var(--paper); margin-bottom: 12px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--paper); }
+.legal { margin-top: 44px; padding-top: 20px; border-top: 1px solid #2A2E33; font-size: .82rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; color: #969CA3; }
+@media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .foot-grid { grid-template-columns: 1fr; } }
+
+/* motion and header state (ui.js adds .js, .reveal, .in, .scrolled) */
+.top { transition: box-shadow .2s; }
+.top.scrolled { box-shadow: 0 6px 20px -12px rgba(23, 25, 28, .35); }
+.top nav a[aria-current] { color: var(--ink); box-shadow: inset 0 -3px 0 var(--yellow); }
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+.center { text-align: center; }
+.ikea-legal.center { padding-block: 18px 28px; margin: 0 auto; }
+
+/* job list builder */
+.builder { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
+.chips { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 28px; }
+.chips fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.chips legend { font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); padding: 0 0 10px; }
+.chip { display: inline-flex; margin: 0 6px 8px 0; position: relative; }
+.chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chip span { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border: 1.5px solid #C9CDD2; border-radius: 999px; font-size: .95rem; font-weight: 600; cursor: pointer; transition: background .15s, border-color .15s; }
+.chip span::before { content: ""; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #9AA1A8; flex: none; }
+.chip input:checked + span { background: var(--yellow); border-color: var(--yellow); }
+.chip input:checked + span::before { border-color: var(--ink); background: var(--ink); box-shadow: inset 0 0 0 2px var(--yellow); }
+.chip input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 2px; }
+.chips .other { grid-column: 1 / -1; display: grid; gap: 6px; }
+.tally { position: sticky; top: 96px; background: var(--ink); color: var(--paper); border-radius: 6px; padding: 26px; display: grid; gap: 14px; }
+.tally h3 { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.tally h3 small { font-size: .85rem; font-weight: 600; color: var(--yellow); letter-spacing: 0; }
+.tally ol { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; color: var(--on-dark); }
+.tally label { font-size: .85rem; color: var(--on-dark); }
+.tally input { background: #23272C; border-color: #3A3F45; color: var(--paper); }
+.tally output { font-size: .88rem; min-height: 1.3em; color: var(--on-dark); }
+.tally output.yes { color: var(--yellow); }
+.tally .note { font-size: .88rem; color: var(--on-dark); border-top: 1px solid #2E3237; padding-top: 12px; }
+.tally .btn { width: 100%; }
+.tally .btn[aria-disabled="true"], .tally button:disabled { opacity: .45; cursor: not-allowed; }
+@media (max-width: 960px) { .builder { grid-template-columns: 1fr; } .tally { position: static; } }
+@media (max-width: 560px) { .chips { grid-template-columns: 1fr; } }
+
+/* plain text pages (privacy, thanks, 404) */
+.prose { max-width: 760px; display: grid; gap: 14px; }
+.prose h2 { font-size: 1.35rem; margin-top: 18px; }
+.prose p { color: var(--ink-2); }
+
+/* phone call bar */
+.callbar { display: none; }
+@media (max-width: 720px) {
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--ink); padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); }
+  .callbar .btn { min-height: 48px; }
+  body { padding-bottom: 70px; }
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jpsmart.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Privacy", "item": "https://jpsmart.com.au/privacy/"}]}</script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="logo" href="/" aria-label="JP Smart Fitouts &amp; Repairs, home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.13 44.00" role="img"><g transform="translate(0 0)"><g transform="translate(0.00 0.00) scale(1.0)"><rect width="44" height="44" rx="3" fill="#17191C"/><path fill="#FFFFFF" d="M10.31 27.33Q7.79 27.33 6 26.62Q4.21 25.91 3.27 24.43Q2.33 22.94 2.33 20.63V20.11H7.37V20.67Q7.37 22.04 8.09 22.68Q8.81 23.31 10.16 23.31Q11.59 23.31 12.33 22.52Q13.06 21.74 13.06 20.05V7.96H18.36V19.96Q18.36 22.51 17.4 24.14Q16.43 25.77 14.64 26.55Q12.84 27.33 10.31 27.33ZM23.17 27V7.96H35.67Q37.57 7.96 38.96 8.77Q40.35 9.57 41.11 11Q41.87 12.43 41.87 14.33Q41.87 16.25 41.09 17.7Q40.32 19.15 38.91 19.95Q37.5 20.75 35.6 20.75H28.46V27ZM28.46 16.76H34.24Q35.44 16.76 36.07 16.13Q36.7 15.51 36.7 14.36Q36.7 13.58 36.42 13.06Q36.14 12.53 35.6 12.25Q35.05 11.98 34.24 11.98H28.46Z"/><path fill="#FFC400" fill-rule="evenodd" d="M0 34H44V41Q44 44 41 44H3Q0 44 0 41ZM6 34h1.3v4.4h-1.3ZM10 34h1.3v2.8h-1.3ZM14 34h1.3v4.4h-1.3ZM18 34h1.3v2.8h-1.3ZM22 34h1.3v4.4h-1.3ZM26 34h1.3v2.8h-1.3ZM30 34h1.3v4.4h-1.3ZM34 34h1.3v2.8h-1.3ZM38 34h1.3v4.4h-1.3Z"/></g><path fill="#17191C" d="M69.47 27.47Q65.88 27.47 63.34 26.46Q60.8 25.45 59.47 23.34Q58.13 21.24 58.13 17.95V17.21H65.3V18.01Q65.3 19.96 66.31 20.86Q67.33 21.76 69.26 21.76Q71.29 21.76 72.33 20.64Q73.37 19.52 73.37 17.13V-0.05H80.9V17Q80.9 20.61 79.54 22.94Q78.17 25.26 75.62 26.36Q73.07 27.47 69.47 27.47ZM87.99 27V-0.05H105.75Q108.46 -0.05 110.43 1.09Q112.41 2.24 113.49 4.27Q114.57 6.3 114.57 9Q114.57 11.73 113.46 13.79Q112.36 15.85 110.36 16.98Q108.35 18.12 105.65 18.12H95.51V27ZM95.51 12.44H103.72Q105.43 12.44 106.32 11.56Q107.21 10.67 107.21 9.04Q107.21 7.93 106.82 7.19Q106.42 6.44 105.65 6.04Q104.88 5.65 103.72 5.65H95.51ZM141.33 27.47Q138.42 27.47 135.88 27.05Q133.33 26.63 131.4 25.62Q129.48 24.62 128.38 22.9Q127.29 21.17 127.29 18.6Q127.29 18.48 127.29 18.32Q127.3 18.17 127.33 18.04H134.64Q134.61 18.18 134.6 18.35Q134.6 18.52 134.6 18.69Q134.6 19.9 135.37 20.63Q136.14 21.36 137.56 21.67Q138.98 21.99 140.85 21.99Q141.74 21.99 142.59 21.92Q143.45 21.85 144.19 21.68Q144.94 21.51 145.51 21.23Q146.09 20.95 146.41 20.53Q146.73 20.11 146.73 19.54Q146.73 18.64 145.94 18.11Q145.15 17.57 143.8 17.22Q142.45 16.87 140.78 16.58Q139.1 16.29 137.3 15.93Q135.5 15.56 133.82 14.98Q132.14 14.39 130.8 13.47Q129.45 12.55 128.66 11.12Q127.87 9.7 127.87 7.67Q127.87 5.53 128.86 3.97Q129.85 2.42 131.63 1.42Q133.4 0.43 135.77 -0.05Q138.14 -0.52 140.88 -0.52Q143.63 -0.52 145.94 -0.04Q148.26 0.45 149.97 1.45Q151.69 2.44 152.63 3.97Q153.58 5.5 153.59 7.58V8.08H146.35V7.79Q146.35 6.93 145.75 6.26Q145.15 5.59 143.98 5.19Q142.82 4.79 141.14 4.79Q139.27 4.79 138.03 5.08Q136.79 5.36 136.18 5.87Q135.57 6.39 135.57 7.03Q135.57 7.86 136.36 8.38Q137.15 8.89 138.5 9.22Q139.84 9.55 141.52 9.84Q143.2 10.12 145 10.48Q146.8 10.83 148.48 11.39Q150.15 11.94 151.5 12.85Q152.85 13.76 153.64 15.12Q154.43 16.48 154.43 18.45Q154.43 21.68 152.74 23.67Q151.04 25.66 148.08 26.57Q145.12 27.47 141.33 27.47ZM160.33 27V-0.05H171.69L175.63 11.84Q175.87 12.53 176.19 13.62Q176.51 14.72 176.84 15.88Q177.17 17.03 177.42 17.96H177.71Q177.91 17.18 178.22 16.11Q178.52 15.04 178.85 13.9Q179.18 12.76 179.46 11.85L183.4 -0.05H194.45V27H187.04V14.3Q187.04 13.02 187.07 11.63Q187.09 10.24 187.13 9.03Q187.17 7.82 187.18 7.15H186.86Q186.7 7.82 186.39 8.89Q186.09 9.97 185.77 11.07Q185.46 12.18 185.18 12.99L180.41 27H173.93L169.15 13Q168.84 12.08 168.52 11Q168.2 9.92 167.93 8.89Q167.67 7.86 167.47 7.16H167.16Q167.2 7.95 167.23 9.17Q167.26 10.38 167.28 11.72Q167.31 13.05 167.31 14.3V27ZM199.13 27 210.8 -0.05H219.47L231.15 27H223.07L221.25 22.48H208.66L206.86 27ZM210.85 16.92H219.07L216.87 11.32Q216.72 10.91 216.48 10.25Q216.24 9.6 215.98 8.84Q215.73 8.09 215.5 7.39Q215.26 6.69 215.11 6.24H214.83Q214.59 6.98 214.26 7.93Q213.93 8.87 213.61 9.78Q213.29 10.69 213.04 11.33ZM235.81 27V-0.05H254.79Q257.78 -0.05 259.75 1.12Q261.72 2.29 262.71 4.25Q263.69 6.2 263.69 8.58Q263.69 11.18 262.48 13.24Q261.27 15.31 258.97 16.48L264.45 27H256.03L251.53 17.73H243.33V27ZM243.33 12.16H252.83Q254.28 12.16 255.15 11.25Q256.02 10.33 256.02 8.79Q256.02 7.78 255.63 7.07Q255.24 6.35 254.53 5.97Q253.82 5.58 252.83 5.58H243.33ZM277.43 27V6.05H267.24V-0.05H295.14V6.05H284.95V27Z"/><path fill="#17191C" d="M58.29 44V37.8H62.77V38.82H59.5V40.46H62.44V41.48H59.5V44ZM73.13 44V37.8H74.34V44ZM86.55 44V38.84H84.57V37.8H89.75V38.84H87.76V44ZM102.6 44.11Q101.63 44.11 100.93 43.76Q100.22 43.41 99.84 42.7Q99.47 41.98 99.47 40.9Q99.47 39.81 99.84 39.1Q100.22 38.39 100.93 38.04Q101.63 37.69 102.6 37.69Q103.58 37.69 104.29 38.04Q104.99 38.39 105.37 39.1Q105.74 39.81 105.74 40.9Q105.74 41.98 105.37 42.7Q104.99 43.41 104.29 43.76Q103.58 44.11 102.6 44.11ZM102.6 43.09Q103.07 43.09 103.42 42.96Q103.77 42.82 104.01 42.56Q104.25 42.3 104.38 41.91Q104.5 41.52 104.5 41.02V40.8Q104.5 40.29 104.38 39.89Q104.25 39.5 104.01 39.24Q103.77 38.97 103.42 38.84Q103.07 38.71 102.6 38.71Q102.14 38.71 101.79 38.84Q101.44 38.97 101.2 39.24Q100.96 39.5 100.83 39.89Q100.71 40.29 100.71 40.8V41.02Q100.71 41.52 100.83 41.91Q100.96 42.3 101.2 42.56Q101.44 42.82 101.79 42.96Q102.14 43.09 102.6 43.09ZM118.74 44.11Q117.92 44.11 117.33 43.84Q116.74 43.58 116.43 43.04Q116.11 42.5 116.11 41.7V37.8H117.32V41.66Q117.32 42.36 117.69 42.73Q118.06 43.09 118.74 43.09Q119.43 43.09 119.8 42.73Q120.18 42.36 120.18 41.66V37.8H121.39V41.7Q121.39 42.5 121.08 43.04Q120.76 43.58 120.17 43.84Q119.57 44.11 118.74 44.11ZM133.57 44V38.84H131.59V37.8H136.77V38.84H134.78V44ZM149.33 44.11Q148.81 44.11 148.33 44Q147.86 43.88 147.49 43.64Q147.13 43.41 146.92 43.05Q146.71 42.69 146.71 42.19Q146.71 42.14 146.72 42.09Q146.72 42.03 146.72 42.01H147.94Q147.93 42.03 147.93 42.07Q147.93 42.12 147.93 42.16Q147.93 42.46 148.1 42.67Q148.27 42.87 148.59 42.99Q148.91 43.1 149.34 43.1Q149.63 43.1 149.86 43.06Q150.09 43.03 150.25 42.96Q150.42 42.89 150.52 42.8Q150.63 42.71 150.68 42.59Q150.73 42.48 150.73 42.34Q150.73 42.08 150.57 41.92Q150.41 41.75 150.13 41.63Q149.86 41.52 149.51 41.42Q149.16 41.33 148.8 41.23Q148.43 41.13 148.08 40.99Q147.74 40.85 147.46 40.65Q147.19 40.45 147.03 40.15Q146.86 39.85 146.86 39.42Q146.86 38.98 147.05 38.65Q147.24 38.33 147.58 38.11Q147.92 37.9 148.37 37.79Q148.83 37.69 149.36 37.69Q149.86 37.69 150.3 37.8Q150.74 37.9 151.08 38.12Q151.42 38.34 151.61 38.68Q151.8 39.02 151.8 39.49V39.6H150.6V39.51Q150.6 39.26 150.45 39.08Q150.29 38.9 150.01 38.8Q149.73 38.7 149.36 38.7Q148.96 38.7 148.67 38.78Q148.39 38.85 148.24 39Q148.08 39.15 148.08 39.36Q148.08 39.58 148.25 39.73Q148.41 39.89 148.68 39.99Q148.96 40.1 149.31 40.19Q149.65 40.28 150.02 40.38Q150.38 40.48 150.73 40.62Q151.08 40.75 151.35 40.96Q151.63 41.16 151.79 41.46Q151.95 41.76 151.95 42.17Q151.95 42.87 151.61 43.3Q151.27 43.73 150.68 43.92Q150.09 44.11 149.33 44.11ZM175.76 44.11Q175.02 44.11 174.46 43.89Q173.9 43.68 173.58 43.28Q173.27 42.88 173.27 42.33Q173.27 41.7 173.61 41.33Q173.96 40.96 174.48 40.82V40.78Q174.02 40.58 173.72 40.28Q173.41 39.97 173.41 39.39Q173.41 38.85 173.71 38.46Q174.02 38.08 174.57 37.89Q175.12 37.69 175.85 37.69Q176.56 37.69 177.09 37.9Q177.62 38.11 177.92 38.49Q178.22 38.88 178.22 39.39V39.62H177.1L177.1 39.47Q177.1 39.18 176.95 38.99Q176.8 38.8 176.52 38.7Q176.24 38.61 175.84 38.61Q175.54 38.61 175.31 38.67Q175.07 38.73 174.9 38.85Q174.74 38.96 174.66 39.13Q174.57 39.3 174.57 39.53Q174.57 39.81 174.72 40.01Q174.87 40.2 175.11 40.3Q175.34 40.4 175.62 40.4H176.24V41.31H175.64Q175.33 41.31 175.05 41.39Q174.77 41.46 174.6 41.66Q174.43 41.86 174.43 42.23Q174.43 42.56 174.6 42.77Q174.76 42.98 175.06 43.08Q175.36 43.19 175.79 43.19Q176.23 43.19 176.52 43.08Q176.81 42.96 176.96 42.74Q177.1 42.51 177.1 42.2V40.4H179.07V41.31H178.22V42.18Q178.22 42.76 177.95 43.19Q177.67 43.63 177.12 43.87Q176.58 44.11 175.76 44.11ZM200.54 44V37.8H203.83Q204.52 37.8 204.97 38.04Q205.42 38.27 205.65 38.71Q205.88 39.14 205.88 39.73Q205.88 40.33 205.6 40.8Q205.33 41.26 204.81 41.5L206.09 44H204.77L203.64 41.7H201.75V44ZM201.75 40.7H203.72Q204.17 40.7 204.41 40.44Q204.65 40.18 204.65 39.73Q204.65 39.44 204.54 39.24Q204.43 39.04 204.23 38.93Q204.02 38.82 203.72 38.82H201.75ZM216.36 44V37.8H221.22V38.82H217.57V40.32H220.82V41.34H217.57V42.98H221.28V44ZM231.77 44V37.8H234.9Q235.58 37.8 236.03 38.04Q236.48 38.29 236.7 38.73Q236.93 39.18 236.93 39.79Q236.93 40.4 236.7 40.85Q236.46 41.31 235.99 41.55Q235.53 41.8 234.84 41.8H232.98V44ZM232.98 40.78H234.78Q235.22 40.78 235.47 40.52Q235.71 40.26 235.71 39.79Q235.71 39.48 235.6 39.27Q235.5 39.05 235.29 38.94Q235.09 38.82 234.78 38.82H232.98ZM246.06 44 248.47 37.8H249.99L252.4 44H251.09L250.61 42.7H247.8L247.31 44ZM248.17 41.69H250.22L249.62 40.04Q249.58 39.95 249.53 39.81Q249.48 39.66 249.43 39.5Q249.37 39.33 249.32 39.16Q249.26 38.99 249.22 38.85H249.17Q249.12 39.03 249.04 39.27Q248.97 39.5 248.9 39.71Q248.82 39.92 248.78 40.04ZM262.45 44V37.8H263.66V44ZM274.35 44V37.8H277.64Q278.33 37.8 278.78 38.04Q279.23 38.27 279.46 38.71Q279.68 39.14 279.68 39.73Q279.68 40.33 279.41 40.8Q279.14 41.26 278.62 41.5L279.9 44H278.57L277.44 41.7H275.56V44ZM275.56 40.7H277.53Q277.97 40.7 278.21 40.44Q278.45 40.18 278.45 39.73Q278.45 39.44 278.35 39.24Q278.24 39.04 278.04 38.93Q277.83 38.82 277.53 38.82H275.56ZM292.5 44.11Q291.98 44.11 291.51 44Q291.03 43.88 290.67 43.64Q290.31 43.41 290.1 43.05Q289.89 42.69 289.89 42.19Q289.89 42.14 289.89 42.09Q289.9 42.03 289.9 42.01H291.11Q291.11 42.03 291.11 42.07Q291.1 42.12 291.1 42.16Q291.1 42.46 291.27 42.67Q291.44 42.87 291.76 42.99Q292.08 43.1 292.52 43.1Q292.81 43.1 293.04 43.06Q293.26 43.03 293.43 42.96Q293.59 42.89 293.7 42.8Q293.81 42.71 293.86 42.59Q293.91 42.48 293.91 42.34Q293.91 42.08 293.75 41.92Q293.58 41.75 293.31 41.63Q293.03 41.52 292.69 41.42Q292.34 41.33 291.97 41.23Q291.61 41.13 291.26 40.99Q290.91 40.85 290.64 40.65Q290.36 40.45 290.2 40.15Q290.04 39.85 290.04 39.42Q290.04 38.98 290.23 38.65Q290.41 38.33 290.75 38.11Q291.1 37.9 291.55 37.79Q292 37.69 292.54 37.69Q293.04 37.69 293.48 37.8Q293.92 37.9 294.26 38.12Q294.59 38.34 294.78 38.68Q294.97 39.02 294.97 39.49V39.6H293.78V39.51Q293.78 39.26 293.62 39.08Q293.47 38.9 293.19 38.8Q292.91 38.7 292.53 38.7Q292.13 38.7 291.85 38.78Q291.56 38.85 291.41 39Q291.26 39.15 291.26 39.36Q291.26 39.58 291.42 39.73Q291.59 39.89 291.86 39.99Q292.14 40.1 292.48 40.19Q292.83 40.28 293.19 40.38Q293.56 40.48 293.91 40.62Q294.25 40.75 294.53 40.96Q294.8 41.16 294.97 41.46Q295.13 41.76 295.13 42.17Q295.13 42.87 294.79 43.3Q294.45 43.73 293.86 43.92Q293.26 44.11 292.5 44.11Z"/></g></svg></a><a class="phone" href="tel:+61426699329" style="margin-left:auto">0426 699 329</a></div></header>
+<main><section><div class="wrap prose">
+<p class="eyebrow">Privacy</p>
+<h1>How we handle your details</h1>
+<p class="lead">Last updated 12 October 2026.</p>
+<h2>What we collect</h2><p>Your name, phone number, email, suburb, the job you describe and any photos you send, through this website, by phone, by text or by email.</p>
+<h2>Calls and texts</h2><p>Calls and texts to our number are answered by Jesse, our AI receptionist. Calls are recorded and transcribed so the job details are right. Jesse may also call or text you about your own job, quote or booking. The service provider, Retell AI, processes calls and texts for us and may store them outside Australia. Photos you send are passed to Minh to price the job.</p>
+<h2>Why</h2><p>To price the job, book it in, do the work, invoice you and follow up on it. We don't sell your details or use them for anything else.</p>
+<h2>Who else sees them</h2><p>Only people needed to do the job, such as the property manager or tenant involved. This website is hosted on GitHub Pages, and the job request form is delivered to our email by FormSubmit (formsubmit.co). Both may process your details outside Australia.</p>
+<h2>Photos of your property</h2><p>We only use before and after photos in our marketing if you say yes, and never with your address.</p>
+<h2>Cookies and advertising</h2><p>This site doesn't use tracking cookies yet. The job list builder works entirely in your browser and sends nothing until you choose to text it or submit the form. If we add analytics or advertising tools, we'll list them here first.</p>
+<h2>Seeing or correcting your details</h2><p>Contact us on 0426 699 329, at hello@jpsmart.com.au, or by post at Shop 15A, 18-22 Kremzow Rd, Brendale QLD 4500. If you're unhappy with how we've handled a privacy issue, you can contact the Office of the Australian Information Commissioner at oaic.gov.au.</p>
+</div></section></main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="/#top" aria-label="JP Smart Fitouts &amp; Repairs, back to top"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.13 44.00" role="img"><g transform="translate(0 0)"><g transform="translate(0.00 0.00) scale(1.0)"><rect width="44" height="44" rx="3" fill="#FFFFFF"/><path fill="#17191C" d="M10.31 27.33Q7.79 27.33 6 26.62Q4.21 25.91 3.27 24.43Q2.33 22.94 2.33 20.63V20.11H7.37V20.67Q7.37 22.04 8.09 22.68Q8.81 23.31 10.16 23.31Q11.59 23.31 12.33 22.52Q13.06 21.74 13.06 20.05V7.96H18.36V19.96Q18.36 22.51 17.4 24.14Q16.43 25.77 14.64 26.55Q12.84 27.33 10.31 27.33ZM23.17 27V7.96H35.67Q37.57 7.96 38.96 8.77Q40.35 9.57 41.11 11Q41.87 12.43 41.87 14.33Q41.87 16.25 41.09 17.7Q40.32 19.15 38.91 19.95Q37.5 20.75 35.6 20.75H28.46V27ZM28.46 16.76H34.24Q35.44 16.76 36.07 16.13Q36.7 15.51 36.7 14.36Q36.7 13.58 36.42 13.06Q36.14 12.53 35.6 12.25Q35.05 11.98 34.24 11.98H28.46Z"/><path fill="#FFC400" fill-rule="evenodd" d="M0 34H44V41Q44 44 41 44H3Q0 44 0 41ZM6 34h1.3v4.4h-1.3ZM10 34h1.3v2.8h-1.3ZM14 34h1.3v4.4h-1.3ZM18 34h1.3v2.8h-1.3ZM22 34h1.3v4.4h-1.3ZM26 34h1.3v2.8h-1.3ZM30 34h1.3v4.4h-1.3ZM34 34h1.3v2.8h-1.3ZM38 34h1.3v4.4h-1.3Z"/></g><path fill="#FFFFFF" d="M69.47 27.47Q65.88 27.47 63.34 26.46Q60.8 25.45 59.47 23.34Q58.13 21.24 58.13 17.95V17.21H65.3V18.01Q65.3 19.96 66.31 20.86Q67.33 21.76 69.26 21.76Q71.29 21.76 72.33 20.64Q73.37 19.52 73.37 17.13V-0.05H80.9V17Q80.9 20.61 79.54 22.94Q78.17 25.26 75.62 26.36Q73.07 27.47 69.47 27.47ZM87.99 27V-0.05H105.75Q108.46 -0.05 110.43 1.09Q112.41 2.24 113.49 4.27Q114.57 6.3 114.57 9Q114.57 11.73 113.46 13.79Q112.36 15.85 110.36 16.98Q108.35 18.12 105.65 18.12H95.51V27ZM95.51 12.44H103.72Q105.43 12.44 106.32 11.56Q107.21 10.67 107.21 9.04Q107.21 7.93 106.82 7.19Q106.42 6.44 105.65 6.04Q104.88 5.65 103.72 5.65H95.51ZM141.33 27.47Q138.42 27.47 135.88 27.05Q133.33 26.63 131.4 25.62Q129.48 24.62 128.38 22.9Q127.29 21.17 127.29 18.6Q127.29 18.48 127.29 18.32Q127.3 18.17 127.33 18.04H134.64Q134.61 18.18 134.6 18.35Q134.6 18.52 134.6 18.69Q134.6 19.9 135.37 20.63Q136.14 21.36 137.56 21.67Q138.98 21.99 140.85 21.99Q141.74 21.99 142.59 21.92Q143.45 21.85 144.19 21.68Q144.94 21.51 145.51 21.23Q146.09 20.95 146.41 20.53Q146.73 20.11 146.73 19.54Q146.73 18.64 145.94 18.11Q145.15 17.57 143.8 17.22Q142.45 16.87 140.78 16.58Q139.1 16.29 137.3 15.93Q135.5 15.56 133.82 14.98Q132.14 14.39 130.8 13.47Q129.45 12.55 128.66 11.12Q127.87 9.7 127.87 7.67Q127.87 5.53 128.86 3.97Q129.85 2.42 131.63 1.42Q133.4 0.43 135.77 -0.05Q138.14 -0.52 140.88 -0.52Q143.63 -0.52 145.94 -0.04Q148.26 0.45 149.97 1.45Q151.69 2.44 152.63 3.97Q153.58 5.5 153.59 7.58V8.08H146.35V7.79Q146.35 6.93 145.75 6.26Q145.15 5.59 143.98 5.19Q142.82 4.79 141.14 4.79Q139.27 4.79 138.03 5.08Q136.79 5.36 136.18 5.87Q135.57 6.39 135.57 7.03Q135.57 7.86 136.36 8.38Q137.15 8.89 138.5 9.22Q139.84 9.55 141.52 9.84Q143.2 10.12 145 10.48Q146.8 10.83 148.48 11.39Q150.15 11.94 151.5 12.85Q152.85 13.76 153.64 15.12Q154.43 16.48 154.43 18.45Q154.43 21.68 152.74 23.67Q151.04 25.66 148.08 26.57Q145.12 27.47 141.33 27.47ZM160.33 27V-0.05H171.69L175.63 11.84Q175.87 12.53 176.19 13.62Q176.51 14.72 176.84 15.88Q177.17 17.03 177.42 17.96H177.71Q177.91 17.18 178.22 16.11Q178.52 15.04 178.85 13.9Q179.18 12.76 179.46 11.85L183.4 -0.05H194.45V27H187.04V14.3Q187.04 13.02 187.07 11.63Q187.09 10.24 187.13 9.03Q187.17 7.82 187.18 7.15H186.86Q186.7 7.82 186.39 8.89Q186.09 9.97 185.77 11.07Q185.46 12.18 185.18 12.99L180.41 27H173.93L169.15 13Q168.84 12.08 168.52 11Q168.2 9.92 167.93 8.89Q167.67 7.86 167.47 7.16H167.16Q167.2 7.95 167.23 9.17Q167.26 10.38 167.28 11.72Q167.31 13.05 167.31 14.3V27ZM199.13 27 210.8 -0.05H219.47L231.15 27H223.07L221.25 22.48H208.66L206.86 27ZM210.85 16.92H219.07L216.87 11.32Q216.72 10.91 216.48 10.25Q216.24 9.6 215.98 8.84Q215.73 8.09 215.5 7.39Q215.26 6.69 215.11 6.24H214.83Q214.59 6.98 214.26 7.93Q213.93 8.87 213.61 9.78Q213.29 10.69 213.04 11.33ZM235.81 27V-0.05H254.79Q257.78 -0.05 259.75 1.12Q261.72 2.29 262.71 4.25Q263.69 6.2 263.69 8.58Q263.69 11.18 262.48 13.24Q261.27 15.31 258.97 16.48L264.45 27H256.03L251.53 17.73H243.33V27ZM243.33 12.16H252.83Q254.28 12.16 255.15 11.25Q256.02 10.33 256.02 8.79Q256.02 7.78 255.63 7.07Q255.24 6.35 254.53 5.97Q253.82 5.58 252.83 5.58H243.33ZM277.43 27V6.05H267.24V-0.05H295.14V6.05H284.95V27Z"/><path fill="#FFFFFF" d="M58.29 44V37.8H62.77V38.82H59.5V40.46H62.44V41.48H59.5V44ZM73.13 44V37.8H74.34V44ZM86.55 44V38.84H84.57V37.8H89.75V38.84H87.76V44ZM102.6 44.11Q101.63 44.11 100.93 43.76Q100.22 43.41 99.84 42.7Q99.47 41.98 99.47 40.9Q99.47 39.81 99.84 39.1Q100.22 38.39 100.93 38.04Q101.63 37.69 102.6 37.69Q103.58 37.69 104.29 38.04Q104.99 38.39 105.37 39.1Q105.74 39.81 105.74 40.9Q105.74 41.98 105.37 42.7Q104.99 43.41 104.29 43.76Q103.58 44.11 102.6 44.11ZM102.6 43.09Q103.07 43.09 103.42 42.96Q103.77 42.82 104.01 42.56Q104.25 42.3 104.38 41.91Q104.5 41.52 104.5 41.02V40.8Q104.5 40.29 104.38 39.89Q104.25 39.5 104.01 39.24Q103.77 38.97 103.42 38.84Q103.07 38.71 102.6 38.71Q102.14 38.71 101.79 38.84Q101.44 38.97 101.2 39.24Q100.96 39.5 100.83 39.89Q100.71 40.29 100.71 40.8V41.02Q100.71 41.52 100.83 41.91Q100.96 42.3 101.2 42.56Q101.44 42.82 101.79 42.96Q102.14 43.09 102.6 43.09ZM118.74 44.11Q117.92 44.11 117.33 43.84Q116.74 43.58 116.43 43.04Q116.11 42.5 116.11 41.7V37.8H117.32V41.66Q117.32 42.36 117.69 42.73Q118.06 43.09 118.74 43.09Q119.43 43.09 119.8 42.73Q120.18 42.36 120.18 41.66V37.8H121.39V41.7Q121.39 42.5 121.08 43.04Q120.76 43.58 120.17 43.84Q119.57 44.11 118.74 44.11ZM133.57 44V38.84H131.59V37.8H136.77V38.84H134.78V44ZM149.33 44.11Q148.81 44.11 148.33 44Q147.86 43.88 147.49 43.64Q147.13 43.41 146.92 43.05Q146.71 42.69 146.71 42.19Q146.71 42.14 146.72 42.09Q146.72 42.03 146.72 42.01H147.94Q147.93 42.03 147.93 42.07Q147.93 42.12 147.93 42.16Q147.93 42.46 148.1 42.67Q148.27 42.87 148.59 42.99Q148.91 43.1 149.34 43.1Q149.63 43.1 149.86 43.06Q150.09 43.03 150.25 42.96Q150.42 42.89 150.52 42.8Q150.63 42.71 150.68 42.59Q150.73 42.48 150.73 42.34Q150.73 42.08 150.57 41.92Q150.41 41.75 150.13 41.63Q149.86 41.52 149.51 41.42Q149.16 41.33 148.8 41.23Q148.43 41.13 148.08 40.99Q147.74 40.85 147.46 40.65Q147.19 40.45 147.03 40.15Q146.86 39.85 146.86 39.42Q146.86 38.98 147.05 38.65Q147.24 38.33 147.58 38.11Q147.92 37.9 148.37 37.79Q148.83 37.69 149.36 37.69Q149.86 37.69 150.3 37.8Q150.74 37.9 151.08 38.12Q151.42 38.34 151.61 38.68Q151.8 39.02 151.8 39.49V39.6H150.6V39.51Q150.6 39.26 150.45 39.08Q150.29 38.9 150.01 38.8Q149.73 38.7 149.36 38.7Q148.96 38.7 148.67 38.78Q148.39 38.85 148.24 39Q148.08 39.15 148.08 39.36Q148.08 39.58 148.25 39.73Q148.41 39.89 148.68 39.99Q148.96 40.1 149.31 40.19Q149.65 40.28 150.02 40.38Q150.38 40.48 150.73 40.62Q151.08 40.75 151.35 40.96Q151.63 41.16 151.79 41.46Q151.95 41.76 151.95 42.17Q151.95 42.87 151.61 43.3Q151.27 43.73 150.68 43.92Q150.09 44.11 149.33 44.11ZM175.76 44.11Q175.02 44.11 174.46 43.89Q173.9 43.68 173.58 43.28Q173.27 42.88 173.27 42.33Q173.27 41.7 173.61 41.33Q173.96 40.96 174.48 40.82V40.78Q174.02 40.58 173.72 40.28Q173.41 39.97 173.41 39.39Q173.41 38.85 173.71 38.46Q174.02 38.08 174.57 37.89Q175.12 37.69 175.85 37.69Q176.56 37.69 177.09 37.9Q177.62 38.11 177.92 38.49Q178.22 38.88 178.22 39.39V39.62H177.1L177.1 39.47Q177.1 39.18 176.95 38.99Q176.8 38.8 176.52 38.7Q176.24 38.61 175.84 38.61Q175.54 38.61 175.31 38.67Q175.07 38.73 174.9 38.85Q174.74 38.96 174.66 39.13Q174.57 39.3 174.57 39.53Q174.57 39.81 174.72 40.01Q174.87 40.2 175.11 40.3Q175.34 40.4 175.62 40.4H176.24V41.31H175.64Q175.33 41.31 175.05 41.39Q174.77 41.46 174.6 41.66Q174.43 41.86 174.43 42.23Q174.43 42.56 174.6 42.77Q174.76 42.98 175.06 43.08Q175.36 43.19 175.79 43.19Q176.23 43.19 176.52 43.08Q176.81 42.96 176.96 42.74Q177.1 42.51 177.1 42.2V40.4H179.07V41.31H178.22V42.18Q178.22 42.76 177.95 43.19Q177.67 43.63 177.12 43.87Q176.58 44.11 175.76 44.11ZM200.54 44V37.8H203.83Q204.52 37.8 204.97 38.04Q205.42 38.27 205.65 38.71Q205.88 39.14 205.88 39.73Q205.88 40.33 205.6 40.8Q205.33 41.26 204.81 41.5L206.09 44H204.77L203.64 41.7H201.75V44ZM201.75 40.7H203.72Q204.17 40.7 204.41 40.44Q204.65 40.18 204.65 39.73Q204.65 39.44 204.54 39.24Q204.43 39.04 204.23 38.93Q204.02 38.82 203.72 38.82H201.75ZM216.36 44V37.8H221.22V38.82H217.57V40.32H220.82V41.34H217.57V42.98H221.28V44ZM231.77 44V37.8H234.9Q235.58 37.8 236.03 38.04Q236.48 38.29 236.7 38.73Q236.93 39.18 236.93 39.79Q236.93 40.4 236.7 40.85Q236.46 41.31 235.99 41.55Q235.53 41.8 234.84 41.8H232.98V44ZM232.98 40.78H234.78Q235.22 40.78 235.47 40.52Q235.71 40.26 235.71 39.79Q235.71 39.48 235.6 39.27Q235.5 39.05 235.29 38.94Q235.09 38.82 234.78 38.82H232.98ZM246.06 44 248.47 37.8H249.99L252.4 44H251.09L250.61 42.7H247.8L247.31 44ZM248.17 41.69H250.22L249.62 40.04Q249.58 39.95 249.53 39.81Q249.48 39.66 249.43 39.5Q249.37 39.33 249.32 39.16Q249.26 38.99 249.22 38.85H249.17Q249.12 39.03 249.04 39.27Q248.97 39.5 248.9 39.71Q248.82 39.92 248.78 40.04ZM262.45 44V37.8H263.66V44ZM274.35 44V37.8H277.64Q278.33 37.8 278.78 38.04Q279.23 38.27 279.46 38.71Q279.68 39.14 279.68 39.73Q279.68 40.33 279.41 40.8Q279.14 41.26 278.62 41.5L279.9 44H278.57L277.44 41.7H275.56V44ZM275.56 40.7H277.53Q277.97 40.7 278.21 40.44Q278.45 40.18 278.45 39.73Q278.45 39.44 278.35 39.24Q278.24 39.04 278.04 38.93Q277.83 38.82 277.53 38.82H275.56ZM292.5 44.11Q291.98 44.11 291.51 44Q291.03 43.88 290.67 43.64Q290.31 43.41 290.1 43.05Q289.89 42.69 289.89 42.19Q289.89 42.14 289.89 42.09Q289.9 42.03 289.9 42.01H291.11Q291.11 42.03 291.11 42.07Q291.1 42.12 291.1 42.16Q291.1 42.46 291.27 42.67Q291.44 42.87 291.76 42.99Q292.08 43.1 292.52 43.1Q292.81 43.1 293.04 43.06Q293.26 43.03 293.43 42.96Q293.59 42.89 293.7 42.8Q293.81 42.71 293.86 42.59Q293.91 42.48 293.91 42.34Q293.91 42.08 293.75 41.92Q293.58 41.75 293.31 41.63Q293.03 41.52 292.69 41.42Q292.34 41.33 291.97 41.23Q291.61 41.13 291.26 40.99Q290.91 40.85 290.64 40.65Q290.36 40.45 290.2 40.15Q290.04 39.85 290.04 39.42Q290.04 38.98 290.23 38.65Q290.41 38.33 290.75 38.11Q291.1 37.9 291.55 37.79Q292 37.69 292.54 37.69Q293.04 37.69 293.48 37.8Q293.92 37.9 294.26 38.12Q294.59 38.34 294.78 38.68Q294.97 39.02 294.97 39.49V39.6H293.78V39.51Q293.78 39.26 293.62 39.08Q293.47 38.9 293.19 38.8Q292.91 38.7 292.53 38.7Q292.13 38.7 291.85 38.78Q291.56 38.85 291.41 39Q291.26 39.15 291.26 39.36Q291.26 39.58 291.42 39.73Q291.59 39.89 291.86 39.99Q292.14 40.1 292.48 40.19Q292.83 40.28 293.19 40.38Q293.56 40.48 293.91 40.62Q294.25 40.75 294.53 40.96Q294.8 41.16 294.97 41.46Q295.13 41.76 295.13 42.17Q295.13 42.87 294.79 43.3Q294.45 43.73 293.86 43.92Q293.26 44.11 292.5 44.11Z"/></g></svg></a>
+        <p class="tag">Small jobs. Properly handled.</p>
+      </div>
+      <div>
+        <h2 class="foot-h">Services</h2>
+        <ul><li><a href="/ikea-assembly/">IKEA assembly</a></li><li><a href="/#services">Handyman services</a></li><li><a href="/property-managers/">Property managers</a></li><li><a href="/#how">How it works</a></li><li><a href="/#faq">Questions</a></li></ul>
+      </div>
+      <div>
+        <h2 class="foot-h">Area</h2>
+        <p>Brisbane CBD and the northern suburbs, out to Bald Hills and Sandgate.</p>
+      </div>
+      <div>
+        <h2 class="foot-h">Contact</h2>
+        <ul><li><a href="tel:+61426699329">0426 699 329</a></li><li><a href="mailto:hello@jpsmart.com.au">hello@jpsmart.com.au</a></li><li><a href="/#quote">Get a price</a></li></ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Minh Duc Pham trading as JP Smart Fitouts &amp; Repairs · ABN 67 245 234 770 · Shop 15A, 18-22 Kremzow Rd, Brendale QLD 4500</span>
+      <span>Building work over $3,300 is referred to QBCC-licensed contractors · <a href="/privacy/">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-yellow" href="tel:+61426699329">Call</a>
+  <a class="btn btn-line" href="sms:+61426699329">Text photos</a>
+</div>
+<script>
+// Shared page behaviour, inlined into every page by build.py. Everything degrades to a plain static page without JS.
+(function () {
+  var doc = document.documentElement;
+  doc.classList.add('js');
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Header gets a shadow once the page scrolls.
+  var top = document.querySelector('.top');
+  function onScroll() { if (top) top.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Sections fade up as they arrive. Skipped for people who ask for less motion.
+  if ('IntersectionObserver' in window && !still) {
+    var items = document.querySelectorAll('main .head, main .card, main .steps li, main .price > div, main .checks li, main .sheet, main .tally, main .chips fieldset');
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); seen.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { el.classList.add('reveal'); seen.observe(el); });
+  }
+
+  // Menu link for the section on screen is highlighted.
+  var links = {};
+  document.querySelectorAll('.top nav a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window && Object.keys(links).length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); });
+          links[e.target.id].setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(links).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+  }
+
+  // Job list builder: ticked jobs become one text to 0426 699 329, or go into the form.
+  var builder = document.getElementById('builder');
+  if (!builder) return;
+  var list = document.getElementById('tally-list'), count = document.getElementById('tally-count'),
+      extra = document.getElementById('b-extra'), sub = document.getElementById('b-suburb'),
+      subOut = document.getElementById('b-suburb-a'), sms = document.getElementById('tally-sms'),
+      toForm = document.getElementById('tally-form');
+  var names = Array.prototype.map.call(document.querySelectorAll('.subs li'), function (li) { return li.dataset.name.toLowerCase(); });
+
+  function jobs() {
+    var picked = Array.prototype.map.call(builder.querySelectorAll('input[type=checkbox]:checked'), function (c) { return c.value; });
+    if (extra.value.trim()) picked.push(extra.value.trim());
+    return picked;
+  }
+  function message(picked) {
+    var lines = ['Hi, job list for JP Smart:'].concat(picked.map(function (j) { return '- ' + j; }));
+    if (sub.value.trim()) lines.push('Suburb: ' + sub.value.trim());
+    return lines.join('\n');
+  }
+  function render() {
+    var picked = jobs();
+    list.innerHTML = '';
+    picked.forEach(function (j) { var li = document.createElement('li'); li.textContent = j; list.appendChild(li); });
+    list.hidden = !picked.length;
+    count.textContent = picked.length ? picked.length + (picked.length === 1 ? ' job' : ' jobs') : 'Nothing ticked yet';
+    var v = sub.value.trim(), hit = names.indexOf(v.toLowerCase()) !== -1;
+    subOut.className = hit ? 'yes' : '';
+    subOut.textContent = hit ? v + ' is in our area.' : v.length > 2 ? 'Not on our list yet. Ask anyway.' : '';
+    sms.href = 'sms:+61426699329?&body=' + encodeURIComponent(message(picked));
+    sms.setAttribute('aria-disabled', picked.length ? 'false' : 'true');
+    toForm.disabled = !picked.length;
+  }
+  builder.addEventListener('change', render);
+  builder.addEventListener('input', render);
+  sms.addEventListener('click', function (e) { if (!jobs().length) e.preventDefault(); });
+  toForm.addEventListener('click', function () {
+    var job = document.getElementById('f-job'), fsub = document.getElementById('f-suburb');
+    if (!job) return;
+    job.value = jobs().join('\n');
+    if (sub.value.trim()) fsub.value = sub.value.trim();
+    document.getElementById('quote').scrollIntoView({ behavior: still ? 'auto' : 'smooth' });
+    document.getElementById('f-name').focus({ preventScroll: true });
+  });
+  render();
+})();
+</script>
+</body>
+</html>
