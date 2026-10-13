@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>IKEA Assembly Brisbane Northside | PAX Wardrobes | JP Smart</title>
-<meta name="description" content="IKEA furniture assembly across Brisbane's northside: PAX wardrobes, beds, desks and shelving, built square and fixed to the wall. Price agreed from your order.">
+<title>IKEA &amp; Flat-Pack Assembly, Brisbane North &amp; Moreton Bay | JP Smart</title>
+<meta name="description" content="IKEA furniture assembly across Brisbane's north and Moreton Bay: PAX wardrobes, beds, desks and shelving, built square and fixed to the wall. Price agreed from your order.">
 <link rel="canonical" href="https://jpsmart.com.au/ikea-assembly/">
 <meta name="theme-color" content="#17191C">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -12,13 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="JP Smart Fitouts &amp; Repairs">
 <meta property="og:locale" content="en_AU">
-<meta property="og:title" content="IKEA Assembly Brisbane Northside | PAX Wardrobes | JP Smart">
-<meta property="og:description" content="IKEA furniture assembly across Brisbane's northside: PAX wardrobes, beds, desks and shelving, built square and fixed to the wall. Price agreed from your order.">
+<meta property="og:title" content="IKEA &amp; Flat-Pack Assembly, Brisbane North &amp; Moreton Bay | JP Smart">
+<meta property="og:description" content="IKEA furniture assembly across Brisbane's north and Moreton Bay: PAX wardrobes, beds, desks and shelving, built square and fixed to the wall. Price agreed from your order.">
 <meta property="og:url" content="https://jpsmart.com.au/ikea-assembly/">
 <meta property="og:image" content="https://jpsmart.com.au/og.png">
 <meta property="og:image:alt" content="JP Smart Fitouts &amp; Repairs logo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
@@ -366,12 +365,33 @@ footer a:hover { color: var(--paper); }
 @media (max-width: 720px) {
   .callbar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--ink); padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); }
   .callbar .btn { min-height: 48px; }
+  .callbar.has-book { grid-template-columns: 1.5fr 1fr 1fr; }
+  .callbar.has-book .btn { padding: 0 .6em; }
   body { padding-bottom: 70px; }
 }
+
+/* Depth (HB 13 Oct 2026): softly rounded corners and layered shadows, so boxes sit off the page. One place for all pages. */
+:root { --r-sm: 10px; --r: 14px; --r-lg: 22px;
+  --depth-1: 0 1px 2px rgba(23, 25, 28, .05), 0 6px 16px -6px rgba(23, 25, 28, .10);
+  --depth-2: 0 2px 4px rgba(23, 25, 28, .05), 0 18px 40px -16px rgba(23, 25, 28, .24);
+  --depth-3: 0 2px 6px rgba(23, 25, 28, .06), 0 34px 80px -30px rgba(23, 25, 28, .48); }
+.btn { border-radius: 12px; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+.btn-yellow { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 10px 22px -10px rgba(150, 110, 0, .55); }
+.btn:hover { transform: translateY(-1px); }
+.btn-yellow:hover { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 14px 28px -10px rgba(150, 110, 0, .6); }
+.card img, .person img, .pm-photo, .ikea-photos img, .map-wrap { border-radius: var(--r); box-shadow: var(--depth-2); }
+.ikea-photos .after, .sheet { border-radius: var(--r-lg); box-shadow: var(--depth-3); }
+.text-cards .card, .price div, .limits, .sent { border-radius: var(--r); box-shadow: var(--depth-1); border: 1px solid rgba(23, 25, 28, .05); }
+form, .tally { border-radius: var(--r-lg); box-shadow: var(--depth-3); }
+input, select, textarea { border-radius: var(--r-sm); box-shadow: inset 0 1px 2px rgba(23, 25, 28, .06); }
+.tag, .ikea-photos figcaption { border-radius: 8px; }
+.faq details { border: 1px solid rgba(23, 25, 28, .07); border-radius: var(--r); padding: 0 20px; margin-bottom: 12px; background: var(--paper); box-shadow: var(--depth-1); }
+.faq summary { padding-right: 36px; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "Furniture assembly", "name": "IKEA furniture assembly", "url": "https://jpsmart.com.au/ikea-assembly/", "description": "IKEA furniture assembly across Brisbane's northside: PAX wardrobes, beds, desks and shelving, built square and fixed to the wall. Price agreed from your order.", "provider": {"@id": "https://jpsmart.com.au/#business", "@type": "HomeAndConstructionBusiness", "name": "JP Smart Fitouts & Repairs"}, "areaServed": [{"@type": "Place", "name": "Brisbane City, QLD"}, {"@type": "Place", "name": "Spring Hill, QLD"}, {"@type": "Place", "name": "Petrie Terrace, QLD"}, {"@type": "Place", "name": "Fortitude Valley, QLD"}, {"@type": "Place", "name": "Bowen Hills, QLD"}, {"@type": "Place", "name": "Newstead, QLD"}, {"@type": "Place", "name": "Herston, QLD"}, {"@type": "Place", "name": "Teneriffe, QLD"}, {"@type": "Place", "name": "New Farm, QLD"}, {"@type": "Place", "name": "Kelvin Grove, QLD"}, {"@type": "Place", "name": "Red Hill, QLD"}, {"@type": "Place", "name": "Windsor, QLD"}, {"@type": "Place", "name": "Wooloowin, QLD"}, {"@type": "Place", "name": "Lutwyche, QLD"}, {"@type": "Place", "name": "Albion, QLD"}, {"@type": "Place", "name": "Ascot, QLD"}, {"@type": "Place", "name": "Hamilton, QLD"}, {"@type": "Place", "name": "Hendra, QLD"}, {"@type": "Place", "name": "Clayfield, QLD"}, {"@type": "Place", "name": "Eagle Farm, QLD"}, {"@type": "Place", "name": "Wilston, QLD"}, {"@type": "Place", "name": "Grange, QLD"}, {"@type": "Place", "name": "Newmarket, QLD"}, {"@type": "Place", "name": "Alderley, QLD"}, {"@type": "Place", "name": "Kedron, QLD"}, {"@type": "Place", "name": "Gordon Park, QLD"}, {"@type": "Place", "name": "Kalinga, QLD"}, {"@type": "Place", "name": "Nundah, QLD"}, {"@type": "Place", "name": "Wavell Heights, QLD"}, {"@type": "Place", "name": "Northgate, QLD"}, {"@type": "Place", "name": "Chermside, QLD"}, {"@type": "Place", "name": "Chermside West, QLD"}, {"@type": "Place", "name": "Stafford, QLD"}, {"@type": "Place", "name": "Stafford Heights, QLD"}, {"@type": "Place", "name": "Everton Park, QLD"}, {"@type": "Place", "name": "Enoggera, QLD"}, {"@type": "Place", "name": "Gaythorne, QLD"}, {"@type": "Place", "name": "Mitchelton, QLD"}, {"@type": "Place", "name": "Aspley, QLD"}, {"@type": "Place", "name": "Geebung, QLD"}, {"@type": "Place", "name": "Zillmere, QLD"}, {"@type": "Place", "name": "Carseldine, QLD"}, {"@type": "Place", "name": "Boondall, QLD"}, {"@type": "Place", "name": "Virginia, QLD"}, {"@type": "Place", "name": "Banyo, QLD"}, {"@type": "Place", "name": "Nudgee, QLD"}, {"@type": "Place", "name": "Nudgee Beach, QLD"}, {"@type": "Place", "name": "Taigum, QLD"}, {"@type": "Place", "name": "Fitzgibbon, QLD"}, {"@type": "Place", "name": "McDowall, QLD"}, {"@type": "Place", "name": "Bridgeman Downs, QLD"}, {"@type": "Place", "name": "Bald Hills, QLD"}, {"@type": "Place", "name": "Bracken Ridge, QLD"}, {"@type": "Place", "name": "Brighton, QLD"}, {"@type": "Place", "name": "Deagon, QLD"}, {"@type": "Place", "name": "Sandgate, QLD"}, {"@type": "Place", "name": "Shorncliffe, QLD"}], "offers": {"@type": "Offer", "priceCurrency": "AUD", "price": "220", "description": "$220 including GST covers the call-out and the first hour on site, then $110 an hour."}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "Furniture assembly", "name": "IKEA furniture assembly", "url": "https://jpsmart.com.au/ikea-assembly/", "description": "IKEA furniture assembly across Brisbane's north and Moreton Bay: PAX wardrobes, beds, desks and shelving, built square and fixed to the wall. Price agreed from your order.", "provider": {"@id": "https://jpsmart.com.au/#business", "@type": "HomeAndConstructionBusiness", "name": "JP Smart Fitouts & Repairs"}, "areaServed": [{"@type": "Place", "name": "Brisbane City, QLD"}, {"@type": "Place", "name": "Spring Hill, QLD"}, {"@type": "Place", "name": "Petrie Terrace, QLD"}, {"@type": "Place", "name": "Fortitude Valley, QLD"}, {"@type": "Place", "name": "Bowen Hills, QLD"}, {"@type": "Place", "name": "Newstead, QLD"}, {"@type": "Place", "name": "Herston, QLD"}, {"@type": "Place", "name": "Teneriffe, QLD"}, {"@type": "Place", "name": "New Farm, QLD"}, {"@type": "Place", "name": "Kelvin Grove, QLD"}, {"@type": "Place", "name": "Red Hill, QLD"}, {"@type": "Place", "name": "Windsor, QLD"}, {"@type": "Place", "name": "Wooloowin, QLD"}, {"@type": "Place", "name": "Lutwyche, QLD"}, {"@type": "Place", "name": "Albion, QLD"}, {"@type": "Place", "name": "Ascot, QLD"}, {"@type": "Place", "name": "Hamilton, QLD"}, {"@type": "Place", "name": "Hendra, QLD"}, {"@type": "Place", "name": "Clayfield, QLD"}, {"@type": "Place", "name": "Eagle Farm, QLD"}, {"@type": "Place", "name": "Wilston, QLD"}, {"@type": "Place", "name": "Grange, QLD"}, {"@type": "Place", "name": "Newmarket, QLD"}, {"@type": "Place", "name": "Alderley, QLD"}, {"@type": "Place", "name": "Kedron, QLD"}, {"@type": "Place", "name": "Gordon Park, QLD"}, {"@type": "Place", "name": "Kalinga, QLD"}, {"@type": "Place", "name": "Nundah, QLD"}, {"@type": "Place", "name": "Wavell Heights, QLD"}, {"@type": "Place", "name": "Northgate, QLD"}, {"@type": "Place", "name": "Chermside, QLD"}, {"@type": "Place", "name": "Chermside West, QLD"}, {"@type": "Place", "name": "Stafford, QLD"}, {"@type": "Place", "name": "Stafford Heights, QLD"}, {"@type": "Place", "name": "Everton Park, QLD"}, {"@type": "Place", "name": "Enoggera, QLD"}, {"@type": "Place", "name": "Gaythorne, QLD"}, {"@type": "Place", "name": "Mitchelton, QLD"}, {"@type": "Place", "name": "Aspley, QLD"}, {"@type": "Place", "name": "Geebung, QLD"}, {"@type": "Place", "name": "Zillmere, QLD"}, {"@type": "Place", "name": "Carseldine, QLD"}, {"@type": "Place", "name": "Boondall, QLD"}, {"@type": "Place", "name": "Virginia, QLD"}, {"@type": "Place", "name": "Banyo, QLD"}, {"@type": "Place", "name": "Nudgee, QLD"}, {"@type": "Place", "name": "Nudgee Beach, QLD"}, {"@type": "Place", "name": "Taigum, QLD"}, {"@type": "Place", "name": "Fitzgibbon, QLD"}, {"@type": "Place", "name": "McDowall, QLD"}, {"@type": "Place", "name": "Bridgeman Downs, QLD"}, {"@type": "Place", "name": "Bald Hills, QLD"}, {"@type": "Place", "name": "Bracken Ridge, QLD"}, {"@type": "Place", "name": "Brighton, QLD"}, {"@type": "Place", "name": "Deagon, QLD"}, {"@type": "Place", "name": "Sandgate, QLD"}, {"@type": "Place", "name": "Shorncliffe, QLD"}, {"@type": "Place", "name": "Brendale, QLD"}, {"@type": "Place", "name": "Strathpine, QLD"}, {"@type": "Place", "name": "Bray Park, QLD"}, {"@type": "Place", "name": "Cashmere, QLD"}, {"@type": "Place", "name": "Joyner, QLD"}, {"@type": "Place", "name": "Warner, QLD"}, {"@type": "Place", "name": "Clear Mountain, QLD"}, {"@type": "Place", "name": "Lawnton, QLD"}, {"@type": "Place", "name": "Petrie, QLD"}, {"@type": "Place", "name": "Kallangur, QLD"}, {"@type": "Place", "name": "Murrumba Downs, QLD"}, {"@type": "Place", "name": "Griffin, QLD"}, {"@type": "Place", "name": "Dakabin, QLD"}, {"@type": "Place", "name": "Kurwongbah, QLD"}, {"@type": "Place", "name": "Narangba, QLD"}, {"@type": "Place", "name": "Burpengary, QLD"}, {"@type": "Place", "name": "North Lakes, QLD"}, {"@type": "Place", "name": "Mango Hill, QLD"}, {"@type": "Place", "name": "Albany Creek, QLD"}, {"@type": "Place", "name": "Eatons Hill, QLD"}, {"@type": "Place", "name": "Bunya, QLD"}, {"@type": "Place", "name": "Arana Hills, QLD"}, {"@type": "Place", "name": "Everton Hills, QLD"}, {"@type": "Place", "name": "Ferny Hills, QLD"}], "offers": {"@type": "Offer", "priceCurrency": "AUD", "price": "220", "description": "$220 including GST covers the call-out and the first hour on site, then $110 an hour."}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does a PAX wardrobe take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the size, the number of doors and how many drawers and inserts are inside. Send a screenshot of the order and Minh tells you how long before you book, so the price isn't a surprise."}}, {"@type": "Question", "name": "Do you fix tall furniture to the wall?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Wardrobes, bookcases and other tall pieces are fixed to the wall so they can't tip, with fixings that suit your wall: plasterboard, brick or timber."}}, {"@type": "Question", "name": "When should I book?", "acceptedAnswer": {"@type": "Answer", "text": "After your delivery date. Bookings start at least 24 hours ahead, as a two-hour arrival window."}}, {"@type": "Question", "name": "Can you collect the order from IKEA North Lakes?", "acceptedAnswer": {"@type": "Answer", "text": "Ask when you text the order and we'll let you know."}}, {"@type": "Question", "name": "Do you take the boxes away?", "acceptedAnswer": {"@type": "Answer", "text": "Ask when you book and we'll let you know."}}, {"@type": "Question", "name": "Do you install IKEA kitchens?", "acceptedAnswer": {"@type": "Answer", "text": "Kitchen cabinets can be part of a job, but plumbing, power and cutting benchtops need licensed trades, and a whole kitchen often goes over the $3,300 limit where a QBCC licence is needed. Send the plan and Minh will tell you what fits."}}, {"@type": "Question", "name": "Are you from IKEA?", "acceptedAnswer": {"@type": "Answer", "text": "No. JP Smart Fitouts & Repairs is independent and isn't connected with IKEA. IKEA is a trade mark of Inter IKEA Systems B.V."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jpsmart.com.au/"}, {"@type": "ListItem", "position": 2, "name": "IKEA assembly", "item": "https://jpsmart.com.au/ikea-assembly/"}]}</script>
+
 </head>
 <body>
 <header class="top">
@@ -384,22 +404,23 @@ footer a:hover { color: var(--paper); }
       <a href="#price">Price</a>
       <a href="#faq">Questions</a>
     </nav>
-    <a class="phone" href="tel:+61426699329">0426 699 329</a>
-    <a class="btn btn-yellow" href="sms:+61426699329?&amp;body=Hi%2C%20IKEA%20order%20to%20put%20together%3A%20">Text your order</a>
+    <a class="phone" href="tel:+61485005568">0485 005 568</a>
+    <a class="btn btn-yellow" href="sms:+61485005568?&amp;body=Hi%2C%20IKEA%20order%20to%20put%20together%3A%20">Text your order</a>
   </div>
 </header>
 
 <main id="top">
   <div class="hero">
     <div class="hero-text">
-      <p class="eyebrow">IKEA assembly · Brisbane CBD to the northside</p>
+      <p class="eyebrow">IKEA assembly · Brisbane north and Moreton Bay</p>
       <h1>IKEA assembly, <span class="hl">built properly.</span></h1>
-      <p class="lead">PAX wardrobes, beds, drawers, desks and shelving, put together square and fixed to the wall where they need to be. For homes, rentals, shops and offices across Brisbane's northside. IKEA is Minh's speciality.</p>
+      <p class="lead">PAX wardrobes, beds, drawers, desks and shelving, put together square and fixed to the wall where they need to be. For homes, rentals, shops and offices across Brisbane's north and Moreton Bay. IKEA is Minh's speciality.</p>
       <div class="ctas">
-        <a class="btn btn-yellow" href="sms:+61426699329?&amp;body=Hi%2C%20IKEA%20order%20to%20put%20together%3A%20">Text a screenshot of your order</a>
-        <a class="btn btn-line" href="tel:+61426699329">Call 0426 699 329</a>
+        <a class="btn btn-yellow" href="/book/">Book IKEA assembly</a>
+        <a class="btn btn-line" href="sms:+61485005568?&amp;body=Hi%2C%20IKEA%20order%20to%20put%20together%3A%20">Text your order</a>
+        <a class="btn btn-line" href="tel:+61485005568">Call 0485 005 568</a>
       </div>
-      <p class="ai-note">Send the order and Minh tells you how long it'll take before you book.</p>
+      <p class="ai-note">Calls and texts are answered by Jesse any time. Send the order and Minh tells you how long it'll take before you book.</p>
     </div>
     <div class="hero-photo"><img src="/img/ikea-done.jpg" alt="White built-in wardrobe with open shoe shelves, assembled and fitted" fetchpriority="high" width="800" height="1000"></div>
   </div>
@@ -447,8 +468,8 @@ footer a:hover { color: var(--paper); }
             <h2>Send the order. Get a time and a price.</h2>
           </div>
           <ol class="steps">
-            <li><div><h3>Text a screenshot of your order</h3><p>To 0426 699 329, with your suburb. The item list tells Minh exactly what's coming and how long it takes.</p></div></li>
-            <li><div><h3>Hear how long and what it costs</h3><p>$220 covers the call-out and first hour on site, then $110 an hour. Minh tells you the usual time before you book.</p></div></li>
+            <li><div><h3>Text a screenshot of your order</h3><p>To 0485 005 568, with your suburb. The item list tells Minh exactly what's coming and how long it takes.</p></div></li>
+            <li><div><h3>Hear how long and what it costs</h3><p>$220 covers the call-out and first hour on site, then $110 an hour. Jesse tells you the usual time before you book.</p></div></li>
             <li><div><h3>Book after your delivery</h3><p>Pick a two-hour arrival window at least 24 hours ahead, once the boxes have arrived.</p></div></li>
             <li><div><h3>Minh builds it</h3><p>Built square, doors and drawers adjusted, tall pieces fixed to the wall with the right fixings for your wall. You get photos when it's done.</p></div></li>
           </ol>
@@ -492,7 +513,7 @@ footer a:hover { color: var(--paper); }
       <div class="head">
         <p class="eyebrow">Questions</p>
         <h2>IKEA assembly questions.</h2>
-        <p class="lead">Anything else, text 0426 699 329.</p>
+        <p class="lead">Anything else, text 0485 005 568.</p>
       </div>
       <div class="faq-list">
         <details>
@@ -531,10 +552,10 @@ footer a:hover { color: var(--paper); }
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">Service area</p>
-        <h2>IKEA assembly from the CBD north to Bald Hills and Sandgate.</h2>
-        <p class="lead">Just outside, like Albany Creek or Strathpine? Ask anyway.</p>
+        <h2>IKEA assembly from the CBD north to Brendale and North Lakes.</h2>
+        <p class="lead">Just outside, like Redcliffe or Samford? Ask anyway.</p>
       </div>
-      <div class="subs wide"><div><h3>City and inner suburbs</h3><ul><li data-name="Brisbane City">Brisbane City<small>4000</small></li><li data-name="Spring Hill">Spring Hill<small>4000</small></li><li data-name="Petrie Terrace">Petrie Terrace<small>4000</small></li><li data-name="Fortitude Valley">Fortitude Valley<small>4006</small></li><li data-name="Bowen Hills">Bowen Hills<small>4006</small></li><li data-name="Newstead">Newstead<small>4006</small></li><li data-name="Herston">Herston<small>4006</small></li><li data-name="Teneriffe">Teneriffe<small>4005</small></li><li data-name="New Farm">New Farm<small>4005</small></li><li data-name="Kelvin Grove">Kelvin Grove<small>4059</small></li><li data-name="Red Hill">Red Hill<small>4059</small></li></ul></div><div><h3>Inner north</h3><ul><li data-name="Windsor">Windsor<small>4030</small></li><li data-name="Wooloowin">Wooloowin<small>4030</small></li><li data-name="Lutwyche">Lutwyche<small>4030</small></li><li data-name="Albion">Albion<small>4010</small></li><li data-name="Ascot">Ascot<small>4007</small></li><li data-name="Hamilton">Hamilton<small>4007</small></li><li data-name="Hendra">Hendra<small>4011</small></li><li data-name="Clayfield">Clayfield<small>4011</small></li><li data-name="Eagle Farm">Eagle Farm<small>4009</small></li><li data-name="Wilston">Wilston<small>4051</small></li><li data-name="Grange">Grange<small>4051</small></li><li data-name="Newmarket">Newmarket<small>4051</small></li><li data-name="Alderley">Alderley<small>4051</small></li></ul></div><div><h3>Middle north</h3><ul><li data-name="Kedron">Kedron<small>4031</small></li><li data-name="Gordon Park">Gordon Park<small>4031</small></li><li data-name="Kalinga">Kalinga<small>4030</small></li><li data-name="Nundah">Nundah<small>4012</small></li><li data-name="Wavell Heights">Wavell Heights<small>4012</small></li><li data-name="Northgate">Northgate<small>4013</small></li><li data-name="Chermside">Chermside<small>4032</small></li><li data-name="Chermside West">Chermside West<small>4032</small></li><li data-name="Stafford">Stafford<small>4053</small></li><li data-name="Stafford Heights">Stafford Heights<small>4053</small></li><li data-name="Everton Park">Everton Park<small>4053</small></li><li data-name="Enoggera">Enoggera<small>4051</small></li><li data-name="Gaythorne">Gaythorne<small>4051</small></li><li data-name="Mitchelton">Mitchelton<small>4053</small></li></ul></div><div><h3>Outer north and bayside</h3><ul><li data-name="Aspley">Aspley<small>4034</small></li><li data-name="Geebung">Geebung<small>4034</small></li><li data-name="Zillmere">Zillmere<small>4034</small></li><li data-name="Carseldine">Carseldine<small>4034</small></li><li data-name="Boondall">Boondall<small>4034</small></li><li data-name="Virginia">Virginia<small>4014</small></li><li data-name="Banyo">Banyo<small>4014</small></li><li data-name="Nudgee">Nudgee<small>4014</small></li><li data-name="Nudgee Beach">Nudgee Beach<small>4014</small></li><li data-name="Taigum">Taigum<small>4018</small></li><li data-name="Fitzgibbon">Fitzgibbon<small>4018</small></li><li data-name="McDowall">McDowall<small>4053</small></li><li data-name="Bridgeman Downs">Bridgeman Downs<small>4035</small></li><li data-name="Bald Hills">Bald Hills<small>4036</small></li><li data-name="Bracken Ridge">Bracken Ridge<small>4017</small></li><li data-name="Brighton">Brighton<small>4017</small></li><li data-name="Deagon">Deagon<small>4017</small></li><li data-name="Sandgate">Sandgate<small>4017</small></li><li data-name="Shorncliffe">Shorncliffe<small>4017</small></li></ul></div></div>
+      <div class="subs wide"><div><h3>City and inner suburbs</h3><ul><li data-name="Brisbane City">Brisbane City<small>4000</small></li><li data-name="Spring Hill">Spring Hill<small>4000</small></li><li data-name="Petrie Terrace">Petrie Terrace<small>4000</small></li><li data-name="Fortitude Valley">Fortitude Valley<small>4006</small></li><li data-name="Bowen Hills">Bowen Hills<small>4006</small></li><li data-name="Newstead">Newstead<small>4006</small></li><li data-name="Herston">Herston<small>4006</small></li><li data-name="Teneriffe">Teneriffe<small>4005</small></li><li data-name="New Farm">New Farm<small>4005</small></li><li data-name="Kelvin Grove">Kelvin Grove<small>4059</small></li><li data-name="Red Hill">Red Hill<small>4059</small></li></ul></div><div><h3>Inner north</h3><ul><li data-name="Windsor">Windsor<small>4030</small></li><li data-name="Wooloowin">Wooloowin<small>4030</small></li><li data-name="Lutwyche">Lutwyche<small>4030</small></li><li data-name="Albion">Albion<small>4010</small></li><li data-name="Ascot">Ascot<small>4007</small></li><li data-name="Hamilton">Hamilton<small>4007</small></li><li data-name="Hendra">Hendra<small>4011</small></li><li data-name="Clayfield">Clayfield<small>4011</small></li><li data-name="Eagle Farm">Eagle Farm<small>4009</small></li><li data-name="Wilston">Wilston<small>4051</small></li><li data-name="Grange">Grange<small>4051</small></li><li data-name="Newmarket">Newmarket<small>4051</small></li><li data-name="Alderley">Alderley<small>4051</small></li></ul></div><div><h3>Middle north</h3><ul><li data-name="Kedron">Kedron<small>4031</small></li><li data-name="Gordon Park">Gordon Park<small>4031</small></li><li data-name="Kalinga">Kalinga<small>4030</small></li><li data-name="Nundah">Nundah<small>4012</small></li><li data-name="Wavell Heights">Wavell Heights<small>4012</small></li><li data-name="Northgate">Northgate<small>4013</small></li><li data-name="Chermside">Chermside<small>4032</small></li><li data-name="Chermside West">Chermside West<small>4032</small></li><li data-name="Stafford">Stafford<small>4053</small></li><li data-name="Stafford Heights">Stafford Heights<small>4053</small></li><li data-name="Everton Park">Everton Park<small>4053</small></li><li data-name="Enoggera">Enoggera<small>4051</small></li><li data-name="Gaythorne">Gaythorne<small>4051</small></li><li data-name="Mitchelton">Mitchelton<small>4053</small></li></ul></div><div><h3>Outer north and bayside</h3><ul><li data-name="Aspley">Aspley<small>4034</small></li><li data-name="Geebung">Geebung<small>4034</small></li><li data-name="Zillmere">Zillmere<small>4034</small></li><li data-name="Carseldine">Carseldine<small>4034</small></li><li data-name="Boondall">Boondall<small>4034</small></li><li data-name="Virginia">Virginia<small>4014</small></li><li data-name="Banyo">Banyo<small>4014</small></li><li data-name="Nudgee">Nudgee<small>4014</small></li><li data-name="Nudgee Beach">Nudgee Beach<small>4014</small></li><li data-name="Taigum">Taigum<small>4018</small></li><li data-name="Fitzgibbon">Fitzgibbon<small>4018</small></li><li data-name="McDowall">McDowall<small>4053</small></li><li data-name="Bridgeman Downs">Bridgeman Downs<small>4035</small></li><li data-name="Bald Hills">Bald Hills<small>4036</small></li><li data-name="Bracken Ridge">Bracken Ridge<small>4017</small></li><li data-name="Brighton">Brighton<small>4017</small></li><li data-name="Deagon">Deagon<small>4017</small></li><li data-name="Sandgate">Sandgate<small>4017</small></li><li data-name="Shorncliffe">Shorncliffe<small>4017</small></li></ul></div><div><h3>Moreton Bay, around Brendale</h3><ul><li data-name="Brendale">Brendale<small>4500</small></li><li data-name="Strathpine">Strathpine<small>4500</small></li><li data-name="Bray Park">Bray Park<small>4500</small></li><li data-name="Cashmere">Cashmere<small>4500</small></li><li data-name="Joyner">Joyner<small>4500</small></li><li data-name="Warner">Warner<small>4500</small></li><li data-name="Clear Mountain">Clear Mountain<small>4500</small></li><li data-name="Lawnton">Lawnton<small>4501</small></li><li data-name="Petrie">Petrie<small>4502</small></li><li data-name="Kallangur">Kallangur<small>4503</small></li><li data-name="Murrumba Downs">Murrumba Downs<small>4503</small></li><li data-name="Griffin">Griffin<small>4503</small></li><li data-name="Dakabin">Dakabin<small>4503</small></li><li data-name="Kurwongbah">Kurwongbah<small>4503</small></li><li data-name="Narangba">Narangba<small>4504</small></li><li data-name="Burpengary">Burpengary<small>4505</small></li><li data-name="North Lakes">North Lakes<small>4509</small></li><li data-name="Mango Hill">Mango Hill<small>4509</small></li><li data-name="Albany Creek">Albany Creek<small>4035</small></li><li data-name="Eatons Hill">Eatons Hill<small>4037</small></li><li data-name="Bunya">Bunya<small>4055</small></li><li data-name="Arana Hills">Arana Hills<small>4054</small></li><li data-name="Everton Hills">Everton Hills<small>4053</small></li><li data-name="Ferny Hills">Ferny Hills<small>4055</small></li></ul></div></div>
     </div>
   </section>
 
@@ -545,12 +566,13 @@ footer a:hover { color: var(--paper); }
         <h2>Send us the order.</h2>
         <p class="lead">A screenshot of your IKEA order and your suburb is all we need to get started.</p>
         <div class="ctas">
-          <a class="btn btn-yellow" href="sms:+61426699329?&amp;body=Hi%2C%20IKEA%20order%20to%20put%20together%3A%20">Text your order</a>
-          <a class="btn btn-line" href="tel:+61426699329">Call 0426 699 329</a>
+          <a class="btn btn-yellow" href="/book/">Book IKEA assembly</a>
+          <a class="btn btn-line" href="sms:+61485005568?&amp;body=Hi%2C%20IKEA%20order%20to%20put%20together%3A%20">Text your order</a>
+          <a class="btn btn-line" href="tel:+61485005568">Call 0485 005 568</a>
         </div>
       </div>
       <ul class="direct">
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><p class="k">Call or text, any time</p><p class="v"><a href="tel:+61426699329">0426 699 329</a></p></div></li>
+        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><p class="k">Call or text, any time</p><p class="v"><a href="tel:+61485005568">0485 005 568</a></p></div></li>
         <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><p class="k">Email the order</p><p class="v"><a href="mailto:hello@jpsmart.com.au?subject=IKEA%20assembly">hello@jpsmart.com.au</a></p></div></li>
       </ul>
     </div>
@@ -571,24 +593,21 @@ footer a:hover { color: var(--paper); }
       </div>
       <div>
         <h2 class="foot-h">Area</h2>
-        <p>Brisbane CBD and the northern suburbs, out to Bald Hills and Sandgate.</p>
+        <p>The Brisbane CBD and northern suburbs, and Moreton Bay around Brendale, out to North Lakes and Burpengary.</p>
       </div>
       <div>
         <h2 class="foot-h">Contact</h2>
-        <ul><li><a href="tel:+61426699329">0426 699 329</a></li><li><a href="mailto:hello@jpsmart.com.au">hello@jpsmart.com.au</a></li><li><a href="/#quote">Get a price</a></li></ul>
+        <ul><li><a href="tel:+61485005568">0485 005 568</a></li><li><a href="mailto:hello@jpsmart.com.au">hello@jpsmart.com.au</a></li><li><a href="/book/">Book online</a></li><li><a href="/#quote">Get a price</a></li></ul>
       </div>
     </div>
     <div class="legal">
       <span>© 2026 Minh Duc Pham trading as JP Smart Fitouts &amp; Repairs · ABN 67 245 234 770 · Shop 15A, 18-22 Kremzow Rd, Brendale QLD 4500</span>
-      <span>Building work over $3,300 is referred to QBCC-licensed contractors · <a href="/privacy/">Privacy</a></span>
+      <span>Building work over $3,300 is referred to QBCC-licensed contractors · <a href="/terms/">Booking terms</a> · <a href="/privacy/">Privacy</a></span>
     </div>
   </div>
 </footer>
 
-<div class="callbar">
-  <a class="btn btn-yellow" href="tel:+61426699329">Call</a>
-  <a class="btn btn-line" href="sms:+61426699329">Text photos</a>
-</div>
+<div class="callbar has-book"><a class="btn btn-yellow" href="/book/">Book online</a><a class="btn btn-line" href="tel:+61485005568">Call</a><a class="btn btn-line" href="sms:+61485005568">Text</a></div>
 <script>
 // Shared page behaviour, inlined into every page by build.py. Everything degrades to a plain static page without JS.
 (function () {
@@ -625,7 +644,13 @@ footer a:hover { color: var(--paper); }
     Object.keys(links).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
   }
 
-  // Job list builder: ticked jobs become one text to 0426 699 329, or go into the form.
+  // Taps on the phone number count as a contact for the ads. jpTrack only exists once tracking is switched on.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"],a[href^="sms:"]');
+    if (a && window.jpTrack) window.jpTrack('contact_click', { method: a.protocol === 'tel:' ? 'call' : 'text' });
+  });
+
+  // Job list builder: ticked jobs become one text to 0485 005 568, or go into the form.
   var builder = document.getElementById('builder');
   if (!builder) return;
   var list = document.getElementById('tally-list'), count = document.getElementById('tally-count'),
@@ -653,7 +678,7 @@ footer a:hover { color: var(--paper); }
     var v = sub.value.trim(), hit = names.indexOf(v.toLowerCase()) !== -1;
     subOut.className = hit ? 'yes' : '';
     subOut.textContent = hit ? v + ' is in our area.' : v.length > 2 ? 'Not on our list yet. Ask anyway.' : '';
-    sms.href = 'sms:+61426699329?&body=' + encodeURIComponent(message(picked));
+    sms.href = 'sms:+61485005568?&body=' + encodeURIComponent(message(picked));
     sms.setAttribute('aria-disabled', picked.length ? 'false' : 'true');
     toForm.disabled = !picked.length;
   }
