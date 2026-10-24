@@ -457,7 +457,6 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
       <label class="bk-opt"><input type="radio" name="service" value="repair"><span><b>Repairs and small jobs</b><small>Doors, locks, patching, TV mounting, silicone, gates...</small></span></label>
       <label class="bk-opt"><input type="radio" name="service" value="ikea"><span><b>IKEA or flat-pack assembly</b><small>Wardrobes, beds, desks, shelving</small></span></label>
       <label class="bk-opt"><input type="radio" name="service" value="big"><span><b>A bigger job, or not sure</b><small>Talk it through with us, or ask for a quote</small></span></label>
-      <label class="bk-opt"><input type="radio" name="service" value="clean"><span><b>Carpet or air-con cleaning</b><small>Priced before we book</small></span></label>
     </div>
     <div class="bk-tenant" hidden>
       <p class="bk-q">Has your property manager or landlord approved the job?</p>
@@ -564,7 +563,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 Minh Duc Pham trading as JP Smart Fitouts &amp; Repairs · ABN 67 245 234 770 · Shop 15A, 18-22 Kremzow Rd, Brendale QLD 4500</span>
+      <span>© 2026 Minh Duc Pham trading as JP Smart Fitouts &amp; Repairs · ABN 67 245 234 770 · Brendale QLD 4500</span>
       <span>Building work over $3,300 is referred to QBCC-licensed contractors · <a href="/terms/">Booking terms</a> · <a href="/privacy/">Privacy</a></span>
     </div>
   </div>
@@ -598,7 +597,6 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
 
   /* What kind of order this is, from the answers so far. */
   function kind() {
-    if (val('service') === 'clean') return 'request';
     if (!inArea(val('suburb'))) return 'request';
     if (val('service') === 'big') return val('bigway') === 'call' ? 'call' : 'request';
     return 'visit';
@@ -666,7 +664,6 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     if (k === 'request') {
       box.innerHTML = '';
       note.textContent = !inArea(val('suburb')) ? 'As it\'s outside our usual area, we\'ll look at the details and get back to you.'
-        : val('service') === 'clean' ? 'Cleaning is priced before we book, so we\'ll look at the details and get back to you with the price and a time.'
         : 'We\'ll look at your request and get back to you with the price and a time.';
       return;
     }
