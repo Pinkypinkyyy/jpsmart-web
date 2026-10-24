@@ -429,7 +429,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
 <main class="booking"><section><div class="wrap">
 <p class="eyebrow">Book online</p>
 <h1>Book online.</h1>
-<p class="lead">Pick a time that suits you and you're booked straight into our diary. Rather talk it through? Call or text us on <a href="tel:+61485005568">0485 005 568</a>, day or night.</p>
+<p class="lead">Pick a time that suits you and you're booked straight into our diary. Rather talk it through? Call or text us on <a href="tel:+61485005568">0485 005 568</a>, Monday to Friday, 7am to 5pm.</p>
 <div class="bk-paths">
   <a class="btn btn-yellow" href="#bk-start">Book online now</a>
   <a class="btn btn-dark" href="tel:+61485005568">Call us</a>
@@ -800,7 +800,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
           : '<p>To confirm it, please pay the $220 deposit by ' + esc(r.deposit_due) + '. The payment link is in your text.</p>') : '<p>No deposit needed. We invoice after the job.</p>')
       : r.kind === 'call' ? '<p class="eyebrow">Phone call booked</p><h2>Thanks, ' + esc(first) + '.</h2><p class="lead">We\'ll call you ' + esc(r.call) + '. We\'ve texted you the time.</p>'
       : '<p class="eyebrow">Request sent</p><h2>Thanks, ' + esc(first) + '. It\'s with us.</h2><p class="lead">' + (r.outside ? 'We\'ll let you know if we can get out to you.' : 'We\'ll look at it and get back to you about the price and a time.') + ' We\'ve texted you, and you can reply to that text to add anything.</p>';
-    d.innerHTML = h + '<p class="bk-note">Questions? Call or text us any time.</p>';
+    d.innerHTML = h + '<p class="bk-note">Questions? Call or text us Monday to Friday, 7am to 5pm.</p>';
     d.hidden = false;
     if (window.jpTrack) window.jpTrack('book_completed', { booking_type: r.kind });
     d.focus();
