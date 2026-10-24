@@ -934,7 +934,7 @@ input, select, textarea { border-radius: var(--r-sm); box-shadow: inset 0 1px 2p
     if (form.dataset.live === '1') return; // live site: FormSubmit emails it to hello@jpsmart.com.au
     e.preventDefault();
     var box = document.getElementById('sent');
-    box.textContent = 'Preview only. On the live site this reaches us straight away, with the photo attached.';
+    box.textContent = 'Preview only. On the live site this goes to us with the photo attached.';
     box.hidden = false;
   });
 })();
