@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Book a Handyman Online, Brisbane North &amp; Moreton Bay | JP Smart</title>
-<meta name="description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl GST covers the call-out and first hour.">
+<meta name="description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
 <link rel="canonical" href="https://jpsmart.com.au/book/">
 <meta name="theme-color" content="#17191C">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="JP Smart Fitouts &amp; Repairs">
 <meta property="og:locale" content="en_AU">
 <meta property="og:title" content="Book a Handyman Online, Brisbane North &amp; Moreton Bay | JP Smart">
-<meta property="og:description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl GST covers the call-out and first hour.">
+<meta property="og:description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
 <meta property="og:url" content="https://jpsmart.com.au/book/">
 <meta property="og:image" content="https://jpsmart.com.au/og.png">
 <meta property="og:image:alt" content="JP Smart Fitouts &amp; Repairs logo">
@@ -435,7 +435,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
   <a class="btn btn-dark" href="tel:+61485005568">Call us</a>
   <a class="btn btn-dark" href="sms:+61485005568">Text us</a>
 </div>
-<p class="bk-price"><b>Price:</b> $220 including GST covers the call-out and the first hour, then $110 an hour. Homeowners pay a $220 deposit to lock in the time; it comes off the final bill. <a href="/terms/">Booking terms</a></p>
+<p class="bk-price"><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST. Homeowners pay a $220 deposit to lock in the time; it comes off the final bill. <a href="/terms/">Booking terms</a></p>
 
 <form id="bk" class="bk" novalidate autocomplete="on" onsubmit="return false">
   <input type="text" name="website" class="bk-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -564,7 +564,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     </div>
     <div class="legal">
       <span>© 2026 Minh Duc Pham trading as JP Smart Fitouts &amp; Repairs · ABN 67 245 234 770 · Brendale QLD 4500</span>
-      <span>Building work over $3,300 is referred to QBCC-licensed contractors · <a href="/terms/">Booking terms</a> · <a href="/privacy/">Privacy</a></span>
+      <span>Jobs of $3,300 or more are outside our scope and are referred to QBCC-licensed contractors · <a href="/terms/">Booking terms</a> · <a href="/privacy/">Privacy</a></span>
     </div>
   </div>
 </footer>
@@ -746,9 +746,9 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     ].filter(function (r) { return r[1]; });
     $('.bk-summary').innerHTML = rows.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('');
     $('.bk-money').innerHTML = k !== 'visit' ? '<p>No payment now. We confirm the price before anything is booked.</p>'
-      : payer() ? '<p><b>Price:</b> $220 including GST for the call-out and the first hour, then $110 an hour' + (val('size') === 'few' ? ' (usually 2 to 3 hours)' : val('size') === 'small' ? ' (usually 1 to 2 hours)' : '') + '.</p>'
+      : payer() ? '<p><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST' + (val('size') === 'few' ? ' (usually 2 to 3 hours)' : val('size') === 'small' ? ' (usually 1 to 2 hours)' : '') + '.</p>'
         + '<p><b>Deposit:</b> $220 to lock in the time, paid from your bank account straight after you confirm. It comes off your final bill. Cancel 24 hours or more before and you get it all back.</p>'
-      : '<p><b>Price:</b> $220 including GST for the call-out and the first hour, then $110 an hour. No deposit: we invoice ' + (val('who') === 'pm' ? 'your agency' : 'the agency or landlord') + ' after the job, with the work order number.</p>';
+      : '<p><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST. No deposit: we invoice ' + (val('who') === 'pm' ? 'your agency' : 'the agency or landlord') + ' after the job, with the work order number.</p>';
     $('.bk-agree').hidden = k !== 'visit';
   }
 
