@@ -15,6 +15,12 @@ Checks every .html / .xml / .txt file in the repo:
      phone numbers. ACMA's reserved fictional mobile numbers (0491 570 006,
      156, 157, 158, 159 and 110) are allowed as form examples.
 
+  6. QBCC wording (qbcc-wording-final-2026-10-25.md): the only threshold wording
+     is QBCC_LINE. No "$3,300 or more", "under $3,300", "QBCC-licensed", penalty
+     amounts or penalty units. Every line that says "$3,300" is QBCC_LINE, every
+     page's footer carries it, and each service page (home, IKEA, property
+     managers) carries it in its body.
+
 Allow-list for "guarantee": the statutory Australian Consumer Law paragraph in
 terms/index.html (the line containing "Australian Consumer Law").
 
@@ -52,6 +58,11 @@ SERVICE_PENDING_PR3 = [
     ("index.html", r'value="Single-storey gut[t]er cl[e]an"><span>Gut[t]ers</span>'),
     ("index.html", r'value="Pre[s]sure cl[e]aning"><span>Pre[s]sure cl[e]aning</span>'),
 ]
+
+QBCC_LINE = ("Unlicensed: cannot perform building work valued at more than $3,300 "
+             "(including GST, labour and all materials, regardless of who supplies them).")
+QBCC_BANNED = re.compile(r"3,300 or more|under \$3,300|less than \$3,300|QBCC-licensed|17,270|penalt|penalty unit", re.I)
+SERVICE_PAGES = ("index.html", "ikea-assembly/index.html", "property-managers/index.html")
 
 OK_PHONES = {
     "0485005568", "61485005568",
@@ -125,8 +136,26 @@ def main():
                             notes.append(f"{rel}:{n}: pending-PR3 service wording allowed until PR #3 merges")
                             continue
                 errors.append(f"{rel}:{n}: banned phrase ({label})")
+            if QBCC_BANNED.search(line):
+                errors.append(f"{rel}:{n}: banned QBCC wording (threshold or penalty wording)")
+            if "$3,300" in line and QBCC_LINE not in line:
+                errors.append(f"{rel}:{n}: $3,300 appears without the exact QBCC line")
             for bad in phone_problems(line):
                 errors.append(f"{rel}:{n}: phone number other than 0485 005 568: {bad}")
+    for path in files():
+        rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
+        if not rel.endswith(".html"):
+            continue
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+        if "<footer" in text:
+            foot = text[text.index("<footer"):]
+            if QBCC_LINE not in foot:
+                errors.append(f"{rel}: footer is missing the QBCC line")
+        if rel in SERVICE_PAGES:
+            body = text[:text.index("<footer")] if "<footer" in text else text
+            if QBCC_LINE not in body:
+                errors.append(f"{rel}: service page body is missing the QBCC line")
     print(f"Checked JSON-LD blocks: {blocks}")
     for note in notes:
         print("  note: " + note)
@@ -135,7 +164,7 @@ def main():
         for e in errors:
             print("  " + e)
         return 1
-    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, banned service wording or stray phone numbers.")
+    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, banned service wording, stray phone numbers or off-script QBCC wording.")
     return 0
 
 
