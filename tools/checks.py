@@ -6,9 +6,16 @@ Checks every .html / .xml / .txt file in the repo:
   2. No "7-day" / "7 day" payment terms.
   3. No banned promise phrases: "any time", "day or night", "guarantee",
      "straight away".
+  4. No cleaning / pressure washing / gutter wording ("clean", "pressure",
+     "gutter"). Three known lines in index.html are allow-listed ONLY until
+     PR #3 (which removes them) merges; see CLEAN_PENDING_PR3 below.
+  5. No phone number other than 0485 005 568 (tel: and +61 forms of the same
+     number are fine). Dollar figures, "$10 million", ABN and dates are not
+     phone numbers. ACMA's reserved fictional mobile numbers (0491 570 006,
+     156, 157, 158, 159 and 110) are allowed as form examples.
 
-Allow-list: the statutory Australian Consumer Law paragraph in
-terms/index.html may use the word "guarantee(s)".
+Allow-list for "guarantee": the statutory Australian Consumer Law paragraph in
+terms/index.html (the line containing "Australian Consumer Law").
 
 Run from the repo root:  python3 tools/checks.py
 Exit code 0 = pass, 1 = fail.
@@ -28,12 +35,32 @@ BANNED = [
     ("day or night", re.compile(r"day\s+or\s+night", re.I)),
     ("guarantee", re.compile(r"guarantee", re.I)),
     ("straight away", re.compile(r"straight\s+away", re.I)),
+    ("cleaning / pressure / gutter", re.compile(r"clean|pressure|gutter", re.I)),
 ]
 
-# (file, phrase label, text that must appear on the same line) -> allowed
+# (file, label, text that must appear on the same line) -> allowed
 ALLOW = [
     ("terms/index.html", "guarantee", "Australian Consumer Law"),
 ]
+
+# TEMPORARY: these lines are removed by PR #3. Allowing them lets PR #4 pass
+# on its own; after PR #3 merges they no longer exist and this list is dead
+# (delete it then). The check still fails on any OTHER cleaning wording.
+CLEAN_PENDING_PR3 = [
+    ("index.html", "Pressure cleaning</li><li>Single-storey gutter cleans"),
+    ("index.html", 'value="Single-storey gutter clean"><span>Gutters</span>'),
+    ("index.html", 'value="Pressure cleaning"><span>Pressure cleaning</span>'),
+]
+
+OK_PHONES = {
+    "0485005568", "61485005568",
+    "0491570006", "0491570156", "0491570157", "0491570158", "0491570159",
+    "0491570110",
+}
+# digit runs with optional spaces, dashes, brackets or a leading +
+PHONE_RX = re.compile(
+    r"(?<![\w$.,/-])(\+?\(?\d{2,4}\)?(?:[ -]\d{2,4}){1,4}|\+?\d{9,12})(?![\w])"
+)
 
 JSONLD = re.compile(
     r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
@@ -49,8 +76,25 @@ def files():
                 yield os.path.join(d, n)
 
 
+def phone_problems(line):
+    out = []
+    for m in PHONE_RX.finditer(line):
+        raw = m.group(1)
+        digits = re.sub(r"\D", "", raw)
+        # skip things that are clearly not phones: too short/long, ABN-like,
+        # or preceded by "$" handled by the lookbehind
+        if len(digits) < 9 or len(digits) > 12:
+            continue
+        if not (digits.startswith(("0", "61", "1300", "1800"))):
+            continue
+        if digits not in OK_PHONES:
+            out.append(raw.strip())
+    return out
+
+
 def main():
     errors = []
+    notes = []
     blocks = 0
     for path in files():
         rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
@@ -69,14 +113,28 @@ def main():
                     continue
                 if any(rel == f and label == l and must in line for f, l, must in ALLOW):
                     continue
+                if label.startswith("cleaning"):
+                    # blank out only the exact pending-PR #3 fragments, then re-test
+                    rest = line
+                    for f, must in CLEAN_PENDING_PR3:
+                        if rel == f and must in rest:
+                            rest = rest.replace(must, "")
+                    if rest != line:
+                        if not rx.search(rest):
+                            notes.append(f"{rel}:{n}: cleaning wording allowed until PR #3 merges")
+                            continue
                 errors.append(f"{rel}:{n}: banned phrase ({label})")
+            for bad in phone_problems(line):
+                errors.append(f"{rel}:{n}: phone number other than 0485 005 568: {bad}")
     print(f"Checked JSON-LD blocks: {blocks}")
+    for note in notes:
+        print("  note: " + note)
     if errors:
         print(f"FAIL: {len(errors)} problem(s)")
         for e in errors:
             print("  " + e)
         return 1
-    print("PASS: JSON-LD parses; no 7-day terms or banned phrases.")
+    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, cleaning wording or stray phone numbers.")
     return 0
 
 
