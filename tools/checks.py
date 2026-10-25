@@ -21,9 +21,14 @@ Checks every .html / .xml / .txt file in the repo:
      page's footer carries it, and each service page (home, IKEA, property
      managers) carries it in its body.
 
-  7. No cover/policy claims (held until a current certificate has been seen by
-     the CFO and the JP Smart CEO). The banned words are written as character
-     classes in COVER_BANNED so a repo-wide grep for them stays at 0.
+  7. Insurance wording (CFO-approved, certificate of currency seen 13 Oct 2026):
+     the only insurance wording is INSURANCE_LINE. Any other variant fails:
+     "insur*", "Allianz", "liability" (so "products liability" too), "certificate
+     of currency", "indemnity", "current to", "fully insured/covered/licensed" and
+     "air con" are only allowed inside INSURANCE_LINE (plus the exact FAQ question
+     "Are you insured?"). INSURANCE_LINE must appear in each of the 5 places:
+     home trust tile, home FAQ (visible), home FAQ (JSON-LD), home "Supplier
+     paperwork ready" item, property-managers "checks" list; and nowhere else.
 
 Allow-list for "guarantee": the statutory Australian Consumer Law paragraph in
 terms/index.html (the line containing "Australian Consumer Law").
@@ -66,7 +71,12 @@ SERVICE_PENDING_PR3 = [
 QBCC_LINE = ("Unlicensed: cannot perform building work valued at more than $3,300 "
              "(including GST, labour and all materials, regardless of who supplies them).")
 QBCC_BANNED = re.compile(r"3,300 or more|under \$3,300|less than \$3,300|QBCC-licensed|17,270|penalt|penalty unit", re.I)
-COVER_BANNED = re.compile(r"[i]nsur(?:ed|ance|er)|[A]llianz|public [l]iability|certificate of [c]urrency", re.I)
+INSURANCE_LINE = ("Public liability insurance of $10 million with Allianz "
+                  "(policy period to 19 October 2027; certificate of currency available on request)")
+INSURANCE_QUESTION = "Are you insured?"
+INSURANCE_VARIANT = re.compile(
+    r"insur|allianz|liabilit|certificate of currency|indemn|current to|fully (?:insured|covered|licensed)|air[\s-]?con",
+    re.I)
 SERVICE_PAGES = ("index.html", "ikea-assembly/index.html", "property-managers/index.html")
 
 OK_PHONES = {
@@ -109,6 +119,42 @@ def phone_problems(line):
     return out
 
 
+def insurance_presence():
+    """The approved sentence must be in each of the 5 places, and nowhere else."""
+    errs = []
+    L = re.escape(INSURANCE_LINE)
+    def read(rel):
+        with open(os.path.join(ROOT, rel), encoding="utf-8") as fh:
+            return fh.read()
+    home = read("index.html")
+    pm = read("property-managers/index.html")
+    # 1. home trust tile
+    trust = home[home.index('<div class="trust">'):] if '<div class="trust">' in home else ""
+    trust = trust[:trust.find("</ul>")] if "</ul>" in trust else trust
+    if not re.search(r"<li>(?:(?!</li>).)*" + L + r"(?:(?!</li>).)*</li>", trust, re.S):
+        errs.append("index.html: trust tile is missing the approved insurance sentence")
+    # 2. home FAQ, visible
+    if not re.search(r"<summary>" + re.escape(INSURANCE_QUESTION) + r"</summary>\s*<p>" + L + r"\.</p>", home):
+        errs.append("index.html: visible FAQ 'Are you insured?' is missing the approved insurance sentence")
+    # 3. home FAQ, JSON-LD
+    if not re.search(r'"name": "' + re.escape(INSURANCE_QUESTION) + r'", "acceptedAnswer": \{"@type": "Answer", "text": "' + L + r'\."\}', home):
+        errs.append("index.html: JSON-LD FAQ 'Are you insured?' is missing the approved insurance sentence")
+    # 4. home "Supplier paperwork ready"
+    if not re.search(r"<b>Supplier paperwork ready</b><span>[^<]*" + L + r"\.</span>", home):
+        errs.append("index.html: 'Supplier paperwork ready' is missing the approved insurance sentence")
+    # 5. property managers checks list
+    if not re.search(r'<ul class="checks light">(?:(?!</ul>).)*<li><div><span>' + L + r"</span></div></li>", pm, re.S):
+        errs.append("property-managers/index.html: checks list is missing the approved insurance sentence")
+    # nowhere else: 4 in home (tile, FAQ, JSON-LD, paperwork), 1 in property-managers, 0 in other files
+    for path in files():
+        rel = os.path.relpath(path, ROOT).replace(os.sep, "/")
+        want = {"index.html": 4, "property-managers/index.html": 1}.get(rel, 0)
+        got = read(rel).count(INSURANCE_LINE)
+        if got != want:
+            errs.append(f"{rel}: approved insurance sentence appears {got} time(s), expected {want}")
+    return errs
+
+
 def main():
     errors = []
     notes = []
@@ -143,8 +189,9 @@ def main():
                 errors.append(f"{rel}:{n}: banned phrase ({label})")
             if QBCC_BANNED.search(line):
                 errors.append(f"{rel}:{n}: banned QBCC wording (threshold or penalty wording)")
-            if COVER_BANNED.search(line):
-                errors.append(f"{rel}:{n}: banned cover/policy wording (held until a current certificate is seen)")
+            rest = line.replace(INSURANCE_LINE, "").replace(INSURANCE_QUESTION, "")
+            if INSURANCE_VARIANT.search(rest):
+                errors.append(f"{rel}:{n}: insurance wording other than the approved sentence")
             if "$3,300" in line and QBCC_LINE not in line:
                 errors.append(f"{rel}:{n}: $3,300 appears without the exact QBCC line")
             for bad in phone_problems(line):
@@ -163,6 +210,7 @@ def main():
             body = text[:text.index("<footer")] if "<footer" in text else text
             if QBCC_LINE not in body:
                 errors.append(f"{rel}: service page body is missing the QBCC line")
+    errors += insurance_presence()
     print(f"Checked JSON-LD blocks: {blocks}")
     for note in notes:
         print("  note: " + note)
@@ -171,7 +219,7 @@ def main():
         for e in errors:
             print("  " + e)
         return 1
-    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, banned service wording, stray phone numbers, off-script QBCC wording or cover/policy claims.")
+    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, banned service wording, stray phone numbers, off-script QBCC wording, off-script insurance wording; approved insurance sentence in all 5 places.")
     return 0
 
 
