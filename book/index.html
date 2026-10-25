@@ -429,7 +429,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
 <main class="booking"><section><div class="wrap">
 <p class="eyebrow">Book online</p>
 <h1>Book online.</h1>
-<p class="lead">Pick a time that suits you and you're booked straight into our diary. On-site work is Monday to Friday, 7am to 5pm. Rather talk it through? Call or text us on <a href="tel:+61485005568">0485 005 568</a>.</p>
+<p class="lead">Pick a time that suits you and we'll confirm your booking. On-site work is Monday to Friday, 7am to 5pm. We aim to arrive within your two-hour window, which depends on traffic, access and the previous job, and we'll text you if times move. Rather talk it through? Call or text us on <a href="tel:+61485005568">0485 005 568</a>.</p>
 <div class="bk-paths">
   <a class="btn btn-yellow" href="#bk-start">Book online now</a>
   <a class="btn btn-dark" href="tel:+61485005568">Call us</a>
@@ -737,7 +737,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     var k = kind();
     var rows = [
       ['Booking', k === 'visit' ? 'A visit' : k === 'call' ? 'A phone call with us' : 'A request for us to get back to you'],
-      [k === 'call' ? 'Call' : 'When', k === 'visit' ? picked() + ', we arrive within the window' : k === 'call' ? picked() : 'We get back to you'],
+      [k === 'call' ? 'Call' : 'When', k === 'visit' ? picked() + ', we aim to arrive within the window' : k === 'call' ? picked() : 'We get back to you'],
       ['Job', val('service') === 'ikea' ? val('items') : val('job')],
       ['Where', (val('address') ? val('address') + ', ' : '') + val('suburb')],
       ['Name', val('name')], ['Mobile', val('mobile')], ['Email', val('email')],
@@ -794,7 +794,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     var d = $('.bk-done');
     var first = val('name').split(' ')[0];
     var h = r.kind === 'visit'
-      ? '<p class="eyebrow">Booked</p><h2>Thanks, ' + esc(first) + '. You\'re booked in.</h2><p class="lead">' + esc(r.window) + '. We arrive within the window. We\'ve texted you the details' + (val('email') ? ' and emailed them too' : '') + '.</p>'
+      ? '<p class="eyebrow">Booked</p><h2>Thanks, ' + esc(first) + '. You\'re booked in.</h2><p class="lead">' + esc(r.window) + '. We aim to arrive within the window. This depends on traffic, access and the previous job, and we\'ll text you if times move. We\'ve texted you the details' + (val('email') ? ' and emailed them too' : '') + '.</p>'
         + (r.deposit_due ? (r.pay_url
           ? '<p>To confirm it, please pay the $220 deposit by ' + esc(r.deposit_due) + '. It comes off your final bill.</p><p><a class="btn btn-yellow" href="' + esc(r.pay_url) + '">Pay the $220 deposit now</a></p><p class="bk-note">You can also pay later with the link in your text.</p>'
           : '<p>To confirm it, please pay the $220 deposit by ' + esc(r.deposit_due) + '. The payment link is in your text.</p>') : '<p>No deposit needed. We invoice after the job.</p>')
