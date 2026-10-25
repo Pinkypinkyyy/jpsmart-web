@@ -29,6 +29,10 @@ Checks every .html / .xml / .txt file in the repo:
      "Are you insured?"). INSURANCE_LINE must appear in each of the 5 places:
      home trust tile, home FAQ (visible), home FAQ (JSON-LD), home "Supplier
      paperwork ready" item, property-managers "checks" list; and nowhere else.
+     INSURANCE_LINE is the CFO text exactly. The only extra markup allowed is a
+     bold "<b>Insurance</b>" heading directly before it in the home trust tile and
+     the property-managers checks list (matching the sibling tiles); the FAQ,
+     JSON-LD and "Supplier paperwork ready" places stay plain text.
 
 Allow-list for "guarantee": the statutory Australian Consumer Law paragraph in
 terms/index.html (the line containing "Australian Consumer Law").
@@ -74,6 +78,9 @@ QBCC_BANNED = re.compile(r"3,300 or more|under \$3,300|less than \$3,300|QBCC-li
 INSURANCE_LINE = ("Public liability insurance of $10 million with Allianz "
                   "(policy period to 19 October 2027; certificate of currency available on request)")
 INSURANCE_QUESTION = "Are you insured?"
+# Heading allowed immediately before INSURANCE_LINE (trust tile: sibling tiles put the sentence straight
+# after <b>; property-managers list: siblings wrap it in <span>). Nothing else is allowed around it.
+INSURANCE_HEADING = "<b>Insurance</b>"
 INSURANCE_VARIANT = re.compile(
     r"insur|allianz|liabilit|certificate of currency|indemn|current to|fully (?:insured|covered|licensed)|air[\s-]?con",
     re.I)
@@ -129,9 +136,11 @@ def insurance_presence():
     home = read("index.html")
     pm = read("property-managers/index.html")
     # 1. home trust tile
-    trust = home[home.index('<div class="trust">'):] if '<div class="trust">' in home else ""
+    m = re.search(r'<div class="trust(?: trust--4up)?">', home)
+    trust = home[m.start():] if m else ""
     trust = trust[:trust.find("</ul>")] if "</ul>" in trust else trust
-    if not re.search(r"<li>(?:(?!</li>).)*" + L + r"(?:(?!</li>).)*</li>", trust, re.S):
+    H = re.escape(INSURANCE_HEADING)
+    if not re.search(r"<li>(?:(?!</li>).)*<div>(?:" + H + r")?" + L + r"</div></li>", trust, re.S):
         errs.append("index.html: trust tile is missing the approved insurance sentence")
     # 2. home FAQ, visible
     if not re.search(r"<summary>" + re.escape(INSURANCE_QUESTION) + r"</summary>\s*<p>" + L + r"\.</p>", home):
@@ -143,7 +152,7 @@ def insurance_presence():
     if not re.search(r"<b>Supplier paperwork ready</b><span>[^<]*" + L + r"\.</span>", home):
         errs.append("index.html: 'Supplier paperwork ready' is missing the approved insurance sentence")
     # 5. property managers checks list
-    if not re.search(r'<ul class="checks light">(?:(?!</ul>).)*<li><div><span>' + L + r"</span></div></li>", pm, re.S):
+    if not re.search(r'<ul class="checks light">(?:(?!</ul>).)*<li><div>(?:' + H + r')?<span>' + L + r"</span></div></li>", pm, re.S):
         errs.append("property-managers/index.html: checks list is missing the approved insurance sentence")
     # nowhere else: 4 in home (tile, FAQ, JSON-LD, paperwork), 1 in property-managers, 0 in other files
     for path in files():
@@ -189,7 +198,10 @@ def main():
                 errors.append(f"{rel}:{n}: banned phrase ({label})")
             if QBCC_BANNED.search(line):
                 errors.append(f"{rel}:{n}: banned QBCC wording (threshold or penalty wording)")
-            rest = line.replace(INSURANCE_LINE, "").replace(INSURANCE_QUESTION, "")
+            # the heading is only tolerated directly in front of the approved sentence (optionally before its <span>)
+            rest = (line.replace(INSURANCE_HEADING + INSURANCE_LINE, "")
+                        .replace(INSURANCE_HEADING + "<span>" + INSURANCE_LINE, "")
+                        .replace(INSURANCE_LINE, "").replace(INSURANCE_QUESTION, ""))
             if INSURANCE_VARIANT.search(rest):
                 errors.append(f"{rel}:{n}: insurance wording other than the approved sentence")
             if "$3,300" in line and QBCC_LINE not in line:
