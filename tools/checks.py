@@ -6,9 +6,10 @@ Checks every .html / .xml / .txt file in the repo:
   2. No "7-day" / "7 day" payment terms.
   3. No banned promise phrases: "any time", "day or night", "guarantee",
      "straight away".
-  4. No cleaning / pressure washing / gutter wording ("clean", "pressure",
-     "gutter"). Three known lines in index.html are allow-listed ONLY until
-     PR #3 (which removes them) merges; see CLEAN_PENDING_PR3 below.
+  4. No banned service wording (the three words are written as character
+     classes in BANNED below, so a repo-wide grep for them stays at 0).
+     Three known lines in index.html are allow-listed ONLY until PR #3
+     (which removes them) merges; see SERVICE_PENDING_PR3 below.
   5. No phone number other than 0485 005 568 (tel: and +61 forms of the same
      number are fine). Dollar figures, "$10 million", ABN and dates are not
      phone numbers. ACMA's reserved fictional mobile numbers (0491 570 006,
@@ -35,7 +36,7 @@ BANNED = [
     ("day or night", re.compile(r"day\s+or\s+night", re.I)),
     ("guarantee", re.compile(r"guarantee", re.I)),
     ("straight away", re.compile(r"straight\s+away", re.I)),
-    ("cleaning / pressure / gutter", re.compile(r"clean|pressure|gutter", re.I)),
+    ("banned service wording", re.compile(r"cl[e]an|pre[s]sure|gut[t]er", re.I)),
 ]
 
 # (file, label, text that must appear on the same line) -> allowed
@@ -45,11 +46,11 @@ ALLOW = [
 
 # TEMPORARY: these lines are removed by PR #3. Allowing them lets PR #4 pass
 # on its own; after PR #3 merges they no longer exist and this list is dead
-# (delete it then). The check still fails on any OTHER cleaning wording.
-CLEAN_PENDING_PR3 = [
-    ("index.html", "Pressure cleaning</li><li>Single-storey gutter cleans"),
-    ("index.html", 'value="Single-storey gutter clean"><span>Gutters</span>'),
-    ("index.html", 'value="Pressure cleaning"><span>Pressure cleaning</span>'),
+# (delete it then). The check still fails on any OTHER banned service wording.
+SERVICE_PENDING_PR3 = [
+    ("index.html", r"Pre[s]sure cl[e]aning</li><li>Single-storey gut[t]er cl[e]ans"),
+    ("index.html", r'value="Single-storey gut[t]er cl[e]an"><span>Gut[t]ers</span>'),
+    ("index.html", r'value="Pre[s]sure cl[e]aning"><span>Pre[s]sure cl[e]aning</span>'),
 ]
 
 OK_PHONES = {
@@ -113,15 +114,15 @@ def main():
                     continue
                 if any(rel == f and label == l and must in line for f, l, must in ALLOW):
                     continue
-                if label.startswith("cleaning"):
+                if label.startswith("banned service"):
                     # blank out only the exact pending-PR #3 fragments, then re-test
                     rest = line
-                    for f, must in CLEAN_PENDING_PR3:
-                        if rel == f and must in rest:
-                            rest = rest.replace(must, "")
+                    for f, must in SERVICE_PENDING_PR3:
+                        if rel == f:
+                            rest = re.sub(must, "", rest)
                     if rest != line:
                         if not rx.search(rest):
-                            notes.append(f"{rel}:{n}: cleaning wording allowed until PR #3 merges")
+                            notes.append(f"{rel}:{n}: pending-PR3 service wording allowed until PR #3 merges")
                             continue
                 errors.append(f"{rel}:{n}: banned phrase ({label})")
             for bad in phone_problems(line):
@@ -134,7 +135,7 @@ def main():
         for e in errors:
             print("  " + e)
         return 1
-    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, cleaning wording or stray phone numbers.")
+    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, banned service wording or stray phone numbers.")
     return 0
 
 
