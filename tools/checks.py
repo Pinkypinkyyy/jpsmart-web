@@ -21,6 +21,10 @@ Checks every .html / .xml / .txt file in the repo:
      page's footer carries it, and each service page (home, IKEA, property
      managers) carries it in its body.
 
+  7. No cover/policy claims (held until a current certificate has been seen by
+     the CFO and the JP Smart CEO). The banned words are written as character
+     classes in COVER_BANNED so a repo-wide grep for them stays at 0.
+
 Allow-list for "guarantee": the statutory Australian Consumer Law paragraph in
 terms/index.html (the line containing "Australian Consumer Law").
 
@@ -62,6 +66,7 @@ SERVICE_PENDING_PR3 = [
 QBCC_LINE = ("Unlicensed: cannot perform building work valued at more than $3,300 "
              "(including GST, labour and all materials, regardless of who supplies them).")
 QBCC_BANNED = re.compile(r"3,300 or more|under \$3,300|less than \$3,300|QBCC-licensed|17,270|penalt|penalty unit", re.I)
+COVER_BANNED = re.compile(r"[i]nsur(?:ed|ance|er)|[A]llianz|public [l]iability|certificate of [c]urrency", re.I)
 SERVICE_PAGES = ("index.html", "ikea-assembly/index.html", "property-managers/index.html")
 
 OK_PHONES = {
@@ -138,6 +143,8 @@ def main():
                 errors.append(f"{rel}:{n}: banned phrase ({label})")
             if QBCC_BANNED.search(line):
                 errors.append(f"{rel}:{n}: banned QBCC wording (threshold or penalty wording)")
+            if COVER_BANNED.search(line):
+                errors.append(f"{rel}:{n}: banned cover/policy wording (held until a current certificate is seen)")
             if "$3,300" in line and QBCC_LINE not in line:
                 errors.append(f"{rel}:{n}: $3,300 appears without the exact QBCC line")
             for bad in phone_problems(line):
@@ -164,7 +171,7 @@ def main():
         for e in errors:
             print("  " + e)
         return 1
-    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, banned service wording, stray phone numbers or off-script QBCC wording.")
+    print("PASS: JSON-LD parses; no 7-day terms, banned phrases, banned service wording, stray phone numbers, off-script QBCC wording or cover/policy claims.")
     return 0
 
 
