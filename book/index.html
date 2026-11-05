@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Book a Handyman Online, Brisbane North &amp; Moreton Bay | JP Smart</title>
-<meta name="description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
+<meta name="description" content="Pick a time that suits you for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
 <link rel="canonical" href="https://jpsmart.com.au/book/">
 <meta name="theme-color" content="#17191C">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="JP Smart Fitouts &amp; Repairs">
 <meta property="og:locale" content="en_AU">
 <meta property="og:title" content="Book a Handyman Online, Brisbane North &amp; Moreton Bay | JP Smart">
-<meta property="og:description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
+<meta property="og:description" content="Pick a time that suits you for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
 <meta property="og:url" content="https://jpsmart.com.au/book/">
 <meta property="og:image" content="https://jpsmart.com.au/og.png">
 <meta property="og:image:alt" content="JP Smart Fitouts &amp; Repairs logo">
@@ -429,7 +429,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
 <main class="booking"><section><div class="wrap">
 <p class="eyebrow">Book online</p>
 <h1>Book online.</h1>
-<p class="lead">Pick a time that suits you and you're booked straight into our diary. Rather talk it through? Call or text us on <a href="tel:+61485005568">0485 005 568</a>, day or night.</p>
+<p class="lead">Pick a time that suits you and we'll confirm your booking. On-site work is Monday to Friday, 7am to 5pm. We aim to arrive within your two-hour window, which depends on traffic, access and the previous job, and we'll text you if times move. Rather talk it through? Call or text us on <a href="tel:+61485005568">0485 005 568</a>.</p>
 <div class="bk-paths">
   <a class="btn btn-yellow" href="#bk-start">Book online now</a>
   <a class="btn btn-dark" href="tel:+61485005568">Call us</a>
@@ -479,7 +479,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
       <div class="bk-grid">
         <div class="field"><label for="bk-agency">Agency</label><input id="bk-agency" name="agency" autocomplete="organization"></div>
         <div class="field"><label for="bk-wo">Work order number</label><input id="bk-wo" name="work_order"></div>
-        <div class="field bk-span"><label for="bk-tenant">Tenant's name and mobile, for access</label><input id="bk-tenant" name="tenant" placeholder="e.g. Jo Smith 0412 000 999"></div>
+        <div class="field bk-span"><label for="bk-tenant">Tenant's name and mobile, for access</label><input id="bk-tenant" name="tenant" placeholder="e.g. Jo Smith 0491 570 006"></div>
       </div>
     </div>
     <div class="bk-approver" hidden>
@@ -564,7 +564,8 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     </div>
     <div class="legal">
       <span>© 2026 Minh Duc Pham trading as JP Smart Fitouts &amp; Repairs · ABN 67 245 234 770 · Brendale QLD 4500</span>
-      <span>Jobs of $3,300 or more are outside our scope and are referred to QBCC-licensed contractors · <a href="/terms/">Booking terms</a> · <a href="/privacy/">Privacy</a></span>
+      <span>Unlicensed: cannot perform building work valued at more than $3,300 (including GST, labour and all materials, regardless of who supplies them).</span>
+      <span><a href="/terms/">Booking terms</a> · <a href="/privacy/">Privacy</a></span>
     </div>
   </div>
 </footer>
@@ -647,7 +648,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     }
     if (name === 'you') {
       if (!val('name')) return err(s, 'Please enter your name.');
-      if (!/^(\+?61|0)4\d{8}$/.test(val('mobile').replace(/[\s()-]/g, ''))) return err(s, 'Please enter an Australian mobile number, like 0412 345 678.');
+      if (!/^(\+?61|0)4\d{8}$/.test(val('mobile').replace(/[\s()-]/g, ''))) return err(s, 'Please enter an Australian mobile number, like 0491 570 006.');
       if (val('email') && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val('email'))) return err(s, 'That email doesn\'t look right.');
       return err(s, '');
     }
@@ -737,7 +738,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     var k = kind();
     var rows = [
       ['Booking', k === 'visit' ? 'A visit' : k === 'call' ? 'A phone call with us' : 'A request for us to get back to you'],
-      [k === 'call' ? 'Call' : 'When', k === 'visit' ? picked() + ', we arrive within the window' : k === 'call' ? picked() : 'We get back to you'],
+      [k === 'call' ? 'Call' : 'When', k === 'visit' ? picked() + ', we aim to arrive within the window' : k === 'call' ? picked() : 'We get back to you'],
       ['Job', val('service') === 'ikea' ? val('items') : val('job')],
       ['Where', (val('address') ? val('address') + ', ' : '') + val('suburb')],
       ['Name', val('name')], ['Mobile', val('mobile')], ['Email', val('email')],
@@ -794,13 +795,13 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     var d = $('.bk-done');
     var first = val('name').split(' ')[0];
     var h = r.kind === 'visit'
-      ? '<p class="eyebrow">Booked</p><h2>Thanks, ' + esc(first) + '. You\'re booked in.</h2><p class="lead">' + esc(r.window) + '. We arrive within the window. We\'ve texted you the details' + (val('email') ? ' and emailed them too' : '') + '.</p>'
+      ? '<p class="eyebrow">Booking received</p><h2>Thanks, ' + esc(first) + '. We\'ve got your booking.</h2><p class="lead">' + esc(r.window) + '. We aim to arrive within the window. This depends on traffic, access and the previous job, and we\'ll text you if times move. We\'ve texted you the details' + (val('email') ? ' and emailed them too' : '') + '.</p>'
         + (r.deposit_due ? (r.pay_url
           ? '<p>To confirm it, please pay the $220 deposit by ' + esc(r.deposit_due) + '. It comes off your final bill.</p><p><a class="btn btn-yellow" href="' + esc(r.pay_url) + '">Pay the $220 deposit now</a></p><p class="bk-note">You can also pay later with the link in your text.</p>'
           : '<p>To confirm it, please pay the $220 deposit by ' + esc(r.deposit_due) + '. The payment link is in your text.</p>') : '<p>No deposit needed. We invoice after the job.</p>')
       : r.kind === 'call' ? '<p class="eyebrow">Phone call booked</p><h2>Thanks, ' + esc(first) + '.</h2><p class="lead">We\'ll call you ' + esc(r.call) + '. We\'ve texted you the time.</p>'
       : '<p class="eyebrow">Request sent</p><h2>Thanks, ' + esc(first) + '. It\'s with us.</h2><p class="lead">' + (r.outside ? 'We\'ll let you know if we can get out to you.' : 'We\'ll look at it and get back to you about the price and a time.') + ' We\'ve texted you, and you can reply to that text to add anything.</p>';
-    d.innerHTML = h + '<p class="bk-note">Questions? Call or text us any time.</p>';
+    d.innerHTML = h + '<p class="bk-note">Questions? Call or text us. On-site work is Monday to Friday, 7am to 5pm.</p>';
     d.hidden = false;
     if (window.jpTrack) window.jpTrack('book_completed', { booking_type: r.kind });
     d.focus();
