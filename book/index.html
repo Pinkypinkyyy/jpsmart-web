@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Book a Handyman Online, Brisbane North &amp; Moreton Bay | JP Smart</title>
-<meta name="description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
+<meta name="description" content="Book handyman work, IKEA assembly or a wall-split aircon clean. Aircon from $120 a unit plus $110 call-out (1 unit from $230). Handyman $220 first hour, then $110/hr.">
 <link rel="canonical" href="https://jpsmart.com.au/book/">
 <meta name="theme-color" content="#17191C">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="JP Smart Fitouts &amp; Repairs">
 <meta property="og:locale" content="en_AU">
 <meta property="og:title" content="Book a Handyman Online, Brisbane North &amp; Moreton Bay | JP Smart">
-<meta property="og:description" content="Pick a time in our diary for handyman repairs, IKEA assembly or a rental work order. $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.">
+<meta property="og:description" content="Book handyman work, IKEA assembly or a wall-split aircon clean. Aircon from $120 a unit plus $110 call-out (1 unit from $230). Handyman $220 first hour, then $110/hr.">
 <meta property="og:url" content="https://jpsmart.com.au/book/">
 <meta property="og:image" content="https://jpsmart.com.au/og.png">
 <meta property="og:image:alt" content="JP Smart Fitouts &amp; Repairs logo">
@@ -390,7 +390,13 @@ input, select, textarea { border-radius: var(--r-sm); box-shadow: inset 0 1px 2p
 </style>
 <style>
 .booking .lead{margin-bottom:18px}.bk-paths{display:flex;flex-wrap:wrap;gap:12px;margin:6px 0 18px}
-.bk-price{font-size:.95rem;color:var(--ink-2);max-width:70ch;margin-bottom:26px}
+.bk-price{font-size:1.02rem;line-height:1.45;color:var(--ink-2);max-width:68ch;margin:0 0 26px;display:grid;gap:12px}
+.bk-price p{margin:0}
+.bk-price b{color:var(--ink)}
+.bk-aircon-quote{display:grid;gap:8px}
+.bk-aircon-total{margin:0;font-size:1.45rem;line-height:1.25;font-weight:800;color:var(--ink)}
+.bk-aircon-quote p{margin:0;color:var(--ink-2)}
+.bk-money .bk-aircon-total{font-size:1.5rem}
 form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;border-radius:0}
 .bk-step{border:1px solid rgba(23,25,28,.06);border-radius:var(--r-lg);padding:clamp(20px,3.4vw,32px);margin:0 0 22px;background:var(--paper);display:grid;gap:18px;box-shadow:var(--depth-2)}
 .bk-step legend{font-weight:800;font-size:1.2rem;padding:0;float:left;width:100%;display:flex;align-items:center;gap:12px;margin-bottom:4px}
@@ -419,7 +425,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
 .bk-summary{background:var(--grey);border-radius:var(--r);padding:16px 18px}
 .bk-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .bk [hidden],.bk[hidden]{display:none!important}
-@media (max-width:640px){.bk-grid,.bk-code{grid-template-columns:1fr}.bk-paths .btn{flex:1 1 100%}}
+@media (max-width:640px){.bk-grid,.bk-code{grid-template-columns:1fr}.bk-paths .btn{flex:1 1 100%}.bk-price{max-width:none;font-size:1.05rem}.bk-aircon-total,.bk-money .bk-aircon-total{font-size:1.6rem}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jpsmart.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Book online", "item": "https://jpsmart.com.au/book/"}]}</script>
 
@@ -435,7 +441,11 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
   <a class="btn btn-dark" href="tel:+61485005568">Call us</a>
   <a class="btn btn-dark" href="sms:+61485005568">Text us</a>
 </div>
-<p class="bk-price"><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST. Homeowners pay a $220 deposit to lock in the time; it comes off the final bill. <a href="/terms/">Booking terms</a></p>
+<div class="bk-price">
+  <p><b>Handyman and assembly:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST.</p>
+  <p><b>Wall-split aircon cleaning:</b> from $120 per unit plus a $110 call-out. <b>1 unit from $230 total. 2 units from $350.</b> Incl. GST. The $220 first-hour minimum does not apply to a standalone aircon clean. Complex or high-access units may cost more, confirmed on inspection. Cleaning only: no gas, electrical work, repairs or installs.</p>
+  <p>Homeowners pay a $220 deposit to lock in the time; it comes off the final bill. <a href="/terms/">Booking terms</a></p>
+</div>
 
 <form id="bk" class="bk" novalidate autocomplete="on" onsubmit="return false">
   <input type="text" name="website" class="bk-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -456,6 +466,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     <div class="bk-opts">
       <label class="bk-opt"><input type="radio" name="service" value="repair"><span><b>Repairs and small jobs</b><small>Doors, locks, patching, TV mounting, silicone, gates...</small></span></label>
       <label class="bk-opt"><input type="radio" name="service" value="ikea"><span><b>IKEA or flat-pack assembly</b><small>Wardrobes, beds, desks, shelving</small></span></label>
+      <label class="bk-opt"><input type="radio" name="service" value="aircon"><span><b>Wall-split aircon cleaning</b><small>From $120 a unit plus $110 call-out. 1 unit from $230.</small></span></label>
       <label class="bk-opt"><input type="radio" name="service" value="big"><span><b>A bigger job, or not sure</b><small>Talk it through with us, or ask for a quote</small></span></label>
     </div>
     <div class="bk-tenant" hidden>
@@ -465,6 +476,17 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
         <label class="bk-opt"><input type="radio" name="approved" value="no"><span><b>Not yet</b></span></label>
       </div>
       <p class="bk-note bk-notyet" hidden>No problem. Please ask your property manager to send us the work order (they can book here too, or call or text 0485 005 568). We'll book it in with you once it's approved, and you won't be charged.</p>
+    </div>
+    <div class="bk-aircon" hidden>
+      <div class="field"><label for="bk-units">How many wall-split units?</label><input id="bk-units" name="units" type="number" inputmode="numeric" min="1" max="30" step="1" value="1"></div>
+      <p class="bk-q">How high is the access?</p>
+      <div class="bk-opts">
+        <label class="bk-opt"><input type="radio" name="access_height" value="standard"><span><b>Standard access</b><small>Reached from the floor or a step ladder</small></span></label>
+        <label class="bk-opt"><input type="radio" name="access_height" value="high"><span><b>High or awkward access</b><small>Tall ladder, stairwell, or a high wall</small></span></label>
+        <label class="bk-opt"><input type="radio" name="access_height" value="unsure"><span><b>Not sure</b><small>We look on site before anything starts</small></span></label>
+      </div>
+      <div class="bk-aircon-quote" aria-live="polite"></div>
+      <p class="bk-note">This from-price is for a standalone wall-split clean. It does not include a surcharge. Complex or high-access units may cost more, and Minh confirms that on inspection before he starts. No gas, electrical work, repairs or installs.</p>
     </div>
     <div class="field bk-for-job"><label for="bk-job">Tell us about the job</label><textarea id="bk-job" name="job" placeholder="e.g. Front door lock damaged after a break-in, and the back gate latch is loose"></textarea></div>
     <div class="field bk-for-ikea" hidden><label for="bk-items">What needs putting together?</label><textarea id="bk-items" name="items" placeholder="e.g. 1 PAX wardrobe 200cm with doors, 2 MALM bedside tables"></textarea></div>
@@ -551,7 +573,7 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
       </div>
       <div>
         <h2 class="foot-h">Services</h2>
-        <ul><li><a href="/ikea-assembly/">IKEA assembly</a></li><li><a href="/#services">Handyman services</a></li><li><a href="/property-managers/">Property managers</a></li><li><a href="/#how">How it works</a></li><li><a href="/#faq">Questions</a></li></ul>
+        <ul><li><a href="/ikea-assembly/">IKEA assembly</a></li><li><a href="/#aircon">Aircon cleaning</a></li><li><a href="/#services">Handyman services</a></li><li><a href="/property-managers/">Property managers</a></li><li><a href="/#how">How it works</a></li><li><a href="/#faq">Questions</a></li></ul>
       </div>
       <div>
         <h2 class="foot-h">Area</h2>
@@ -588,6 +610,41 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
   var inArea = function (s) { s = String(s || '').trim().toLowerCase(); return SUBURBS.some(function (x) { return x.toLowerCase() === s; }); };
   var rental = function () { return val('who') === 'pm' || val('who') === 'tenant'; };
   var payer = function () { return !rental(); };
+  var AIRCON_UNIT = 120, AIRCON_CALLOUT = 110;
+  var ACCESS_LABEL = {
+    standard: 'Standard access, from the floor or a step ladder',
+    high: 'High or awkward access',
+    unsure: 'Not sure, confirm on site'
+  };
+  function airconUnits() {
+    var n = parseInt(val('units'), 10);
+    return n >= 1 && n <= 30 ? n : 0;
+  }
+  function airconTotal(n) { return AIRCON_UNIT * n + AIRCON_CALLOUT; }
+  function airconPriceText(n) {
+    var total = airconTotal(n);
+    var known = n === 1 ? '1 unit from $230 total' : n === 2 ? '2 units from $350 total' : n + ' units from $' + total + ' total (' + n + ' × $120 + $110 call-out)';
+    return 'From $120 per unit plus a $110 call-out. ' + known + '. This booking is from $' + total + ' incl. GST for ' + n + (n === 1 ? ' unit.' : ' units.');
+  }
+  function airconScopeText() {
+    return 'The $220 first-hour minimum does not apply to this standalone clean. Complex or high-access units may cost more, confirmed on inspection before work starts. Wall-split cleaning only: no gas, electrical work, repairs or installs.';
+  }
+  function airconPriceHtml(n) {
+    return '<p class="bk-aircon-total">From $' + airconTotal(n) + ' total for ' + n + (n === 1 ? ' unit' : ' units') + '</p>'
+      + '<p>' + esc(airconPriceText(n)) + '</p><p>' + esc(airconScopeText()) + '</p>';
+  }
+  function renderAircon() {
+    var box = $('.bk-aircon-quote');
+    if (!box) return;
+    var n = airconUnits();
+    box.innerHTML = n ? airconPriceHtml(n) : '<p>Enter how many wall-split units to see the from-price.</p>';
+  }
+  function airconJobText() {
+    var n = airconUnits();
+    var access = ACCESS_LABEL[val('access_height')] || val('access_height');
+    var notes = val('job');
+    return 'Wall-split aircon cleaning only. Units: ' + n + '. Access: ' + access + '. ' + airconPriceText(n) + ' ' + airconScopeText() + (notes ? ' Notes: ' + notes : '');
+  }
 
   function api(body) {
     return fetch(API, { method: 'POST', body: new URLSearchParams({ p: JSON.stringify(body) }) })
@@ -628,6 +685,8 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     if (name === 'job') {
       if (!val('service')) return err(s, 'Please choose the kind of job.');
       if (val('who') === 'tenant' && val('approved') !== 'yes') return err(s, val('approved') === 'no' ? 'Once the job is approved, your property manager can send us the work order.' : 'Please tell us if the job is approved.');
+      if (val('service') === 'aircon' && !airconUnits()) return err(s, 'Please enter how many wall-split units, from 1 up.');
+      if (val('service') === 'aircon' && !val('access_height')) return err(s, 'Please tell us the access height.');
       if (val('service') === 'ikea' ? !val('items') : !val('job')) return err(s, 'Please tell us a little about the job.');
       if ((val('service') === 'repair' || val('service') === 'ikea') && !val('size')) return err(s, 'Please choose roughly how much there is.');
       if (val('who') === 'pm' && (!val('agency') || !val('work_order'))) return err(s, 'Please enter the agency and the work order number.');
@@ -700,13 +759,14 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
   f.addEventListener('change', function (e) {
     var t = e.target;
     if (t.name === 'slot') st.picked = t.value;
-    if (t.name === 'who' || t.name === 'service' || t.name === 'approved') sync();
+    if (t.name === 'who' || t.name === 'service' || t.name === 'approved' || t.name === 'units' || t.name === 'access_height') sync();
     if (t.name === 'who') { st.times = []; st.picked = null; show(Math.max(st.step, 1)); }
     if (t.name === 'bigway') { st.picked = null; loadTimes(); }
     if (t.name === 'suburb') { $('.bk-outside').hidden = !val('suburb') || inArea(val('suburb')); st.times = []; st.picked = null; }
     if (t.id === 'bk-photos') st.photos = [].slice.call(t.files || []).slice(0, 3);
   });
   $('#bk-suburb').addEventListener('input', function () { $('.bk-outside').hidden = !val('suburb') || inArea(val('suburb')) || val('suburb').length < 4; });
+  f.addEventListener('input', function (e) { if (e.target.name === 'units') renderAircon(); });
 
   /* Show only the fields that apply to this kind of client and job. */
   function sync() {
@@ -717,7 +777,11 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     $('.bk-approver').hidden = !(who === 'tenant' && val('approved') === 'yes');
     $('.bk-for-ikea').hidden = svc !== 'ikea';
     $('.bk-for-job').hidden = svc === 'ikea';
+    $('.bk-aircon').hidden = svc !== 'aircon';
     $('.bk-size').hidden = !(svc === 'repair' || svc === 'ikea');
+    var job = $('#bk-job');
+    if (job) job.placeholder = svc === 'aircon' ? 'e.g. Two wall-splits, living room and main bedroom, both dusty' : 'e.g. Front door lock damaged after a break-in, and the back gate latch is loose';
+    if (svc === 'aircon') renderAircon();
   }
 
   f.addEventListener('click', function (e) {
@@ -738,17 +802,26 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     var rows = [
       ['Booking', k === 'visit' ? 'A visit' : k === 'call' ? 'A phone call with us' : 'A request for us to get back to you'],
       [k === 'call' ? 'Call' : 'When', k === 'visit' ? picked() + ', we arrive within the window' : k === 'call' ? picked() : 'We get back to you'],
-      ['Job', val('service') === 'ikea' ? val('items') : val('job')],
+      ['Job', val('service') === 'aircon' ? airconJobText() : val('service') === 'ikea' ? val('items') : val('job')],
+      ['Units', val('service') === 'aircon' && airconUnits() ? String(airconUnits()) + (airconUnits() === 1 ? ' wall-split unit' : ' wall-split units') : ''],
+      ['Height', val('service') === 'aircon' ? (ACCESS_LABEL[val('access_height')] || '') : ''],
       ['Where', (val('address') ? val('address') + ', ' : '') + val('suburb')],
       ['Name', val('name')], ['Mobile', val('mobile')], ['Email', val('email')],
       ['Agency', val('agency')], ['Work order', val('work_order')], ['Tenant', val('tenant')], ['Approved by', val('approved_by')], ['Access', val('access')],
       ['Photos', st.photos.length ? st.photos.length + ' attached' : ''],
     ].filter(function (r) { return r[1]; });
     $('.bk-summary').innerHTML = rows.map(function (r) { return '<dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('');
-    $('.bk-money').innerHTML = k !== 'visit' ? '<p>No payment now. We confirm the price before anything is booked.</p>'
-      : payer() ? '<p><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST' + (val('size') === 'few' ? ' (usually 2 to 3 hours)' : val('size') === 'small' ? ' (usually 1 to 2 hours)' : '') + '.</p>'
-        + '<p><b>Deposit:</b> $220 to lock in the time, paid from your bank account straight after you confirm. It comes off your final bill. Cancel 24 hours or more before and you get it all back.</p>'
-      : '<p><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST. No deposit: we invoice ' + (val('who') === 'pm' ? 'your agency' : 'the agency or landlord') + ' after the job, with the work order number.</p>';
+    if (val('service') === 'aircon' && airconUnits()) {
+      var airconPay = k !== 'visit' ? '<p>No payment now. We confirm the price before anything is booked.</p>'
+        : payer() ? '<p><b>Deposit:</b> $220 to lock in the time, paid from your bank account straight after you confirm. It comes off your final bill. Cancel 24 hours or more before and you get it all back.</p>'
+        : '<p><b>Deposit:</b> none. We invoice ' + (val('who') === 'pm' ? 'your agency' : 'the agency or landlord') + ' after the job, with the work order number.</p>';
+      $('.bk-money').innerHTML = airconPriceHtml(airconUnits()) + airconPay;
+    } else {
+      $('.bk-money').innerHTML = k !== 'visit' ? '<p>No payment now. We confirm the price before anything is booked.</p>'
+        : payer() ? '<p><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST' + (val('size') === 'few' ? ' (usually 2 to 3 hours)' : val('size') === 'small' ? ' (usually 1 to 2 hours)' : '') + '.</p>'
+          + '<p><b>Deposit:</b> $220 to lock in the time, paid from your bank account straight after you confirm. It comes off your final bill. Cancel 24 hours or more before and you get it all back.</p>'
+        : '<p><b>Price:</b> $220 incl. GST for the call-out and first hour, then $110/hr incl. GST. No deposit: we invoice ' + (val('who') === 'pm' ? 'your agency' : 'the agency or landlord') + ' after the job, with the work order number.</p>';
+    }
     $('.bk-agree').hidden = k !== 'visit';
   }
 
@@ -772,12 +845,18 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     if (!/^\d{4}$/.test(val('code'))) { msg.textContent = 'Please tap "Text me a code" and enter the 4 digits from the text.'; return; }
     b.disabled = true;
     msg.textContent = k === 'visit' ? 'Booking you in...' : 'Sending...';
-    api({
+    var payload = {
       action: 'book', kind: k, website: val('website'), who: val('who'), service: val('service'), job: val('job'), items: val('items'), size: val('size'),
       agency: val('agency'), work_order: val('work_order'), tenant: val('tenant'), approved_by: val('approved_by'),
       suburb: val('suburb'), address: val('address'), access: val('access'), name: val('name'), mobile: val('mobile'), email: val('email'),
       code: val('code'), window_start: k === 'visit' ? st.picked : '', slot_start: k === 'call' ? st.picked : '', photos: st.photos.length,
-    }).then(function (r) {
+    };
+    if (val('service') === 'aircon') {
+      payload.units = String(airconUnits());
+      payload.access_height = val('access_height');
+      payload.job = airconJobText();
+    }
+    api(payload).then(function (r) {
       b.disabled = false;
       if (!r.ok) {
         msg.textContent = r.message || 'Sorry, that didn\'t work.';
@@ -832,6 +911,12 @@ form.bk{display:block;padding:0;background:none;max-width:860px;box-shadow:none;
     });
   }
 
+  var preset = '';
+  try { preset = new URLSearchParams(location.search).get('service') || ''; } catch (e) { preset = ''; }
+  if (preset === 'aircon') {
+    var presetAircon = f.querySelector('input[name="service"][value="aircon"]');
+    if (presetAircon) presetAircon.checked = true;
+  }
   sync();
   show(0);
   if (location.hash === '#bk-start') steps[0].scrollIntoView();
